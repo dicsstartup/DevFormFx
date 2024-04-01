@@ -1,0 +1,105 @@
+.root {
+    /*paleta de color*/
+    blackc: #171717;
+    whitec: #e8e8e8;
+}
+
+.blanco {
+    -fx-background-color: whitec;
+}
+
+.vbox {
+    -fx-background-color: blackc;
+    -fx-background-radius: 16px;
+    -fx-max-width: 100%;
+}
+
+.titulo {
+    -fx-text-fill: whitec;
+    -fx-text-alignment: center;
+    -fx-font-family: 'Arial Black';
+    -fx-font-size: 24px;
+}
+
+GridPane {
+    -fx-hgap: 10;
+}
+
+TextField {
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-text-fill: whitec;
+    -fx-background-color: blackc;
+    -fx-focus-color: whitec;
+    -fx-border-width: 1px;
+    -fx-border-color: whitec;
+    -fx-border-radius: 8px;
+}
+
+.error {
+    -fx-text-fill: red;
+}
+
+.label {
+    -fx-text-fill: whitec;
+    -fx-font-weight: bold;
+
+}
+
+.scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: e8e8e8;
+    -fx-background-radius: 8px;
+}
+
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.increment-button,
+.decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: blackc;
+    -fx-background-radius: 5em;
+}
+
+.item {
+    -fx-background-color: blackc;
+    -fx-background-radius: 6px;
+}
+
+.action {
+    -fx-background-color: blackc;
+}
+
+.dev-add-item {
+    -fx-background-color: whitec;
+}
+
+.delete {
+    -fx-background-color: blackc;
+}
+
+.dev-action:pressed {
+    -fx-opacity: 0.7;
+}
+.dev-action:hover {
+    -fx-scale-x	: 1.1;
+    -fx-scale-y	: 1.1;
+}
