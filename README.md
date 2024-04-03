@@ -14,7 +14,8 @@ DevFormFx es una librería Java que te permite crear bibliotecas de manera diná
 
 Utiliza las tres principales partes de DevFormFx:
 
-###DevFormBuilder: 
+### DevFormBuilder: 
+
 Define el layout principal del formulario, con opciones para agregar columnas y filas.
 Inputs: Define los parámetros de entrada que los usuarios pueden completar.
 Actions: Define los botones o acciones que los usuarios pueden realizar.
