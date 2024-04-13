@@ -1,6 +1,5 @@
 package com.dicsstartup.devformfx.inputs;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import javafx.geometry.Pos;
@@ -21,9 +20,10 @@ public class DevRadioButtonList extends DevInput {
     List<RadioButton> listRBottons;
     HBox hbox;
     ToggleGroup group;
-    public DevRadioButtonList(String title, String... options) {
-        super(title, TypeDevInput.RADIO_BUTTON_LIST);
-        listRBottons=new ArrayList<>();
+
+    public DevRadioButtonList(String name, String title, String... options) {
+        super(name, title, TypeDevInput.RADIO_BUTTON_LIST);
+        listRBottons = new ArrayList<>();
         hbox = new HBox();
         hbox.setSpacing(10);
         hbox.setAlignment(Pos.CENTER);
@@ -33,25 +33,30 @@ public class DevRadioButtonList extends DevInput {
             listRBottons.add(rb);
             hbox.getChildren().add(rb);
         }
-        this.getChildren().addAll(this.title,this.hbox);
+        this.getChildren().addAll(this.title, this.hbox);
     }
-    public DevRadioButtonList(String title,Boolean group,String... options) {
-        super(title, TypeDevInput.RADIO_BUTTON_LIST);
+
+    public DevRadioButtonList(String name, String title, Boolean group, String... options) {
+        super(name, title, TypeDevInput.RADIO_BUTTON_LIST);
         this.group = new ToggleGroup();
-        listRBottons=new ArrayList<>();
+        listRBottons = new ArrayList<>();
         hbox = new HBox();
         hbox.setSpacing(10);
         hbox.setAlignment(Pos.CENTER);
         this.setSpacing(5);
         for (String i : options) {
             RadioButton rb = new RadioButton(i);
-            if(group){
-              this.group.getToggles().add(rb);  
+            if (group) {
+                this.group.getToggles().add(rb);
             }
             listRBottons.add(rb);
             hbox.getChildren().add(rb);
         }
-        this.getChildren().addAll(this.title,this.hbox);
+        this.getChildren().addAll(this.title, this.hbox);
     }
 
+       @Override
+    public Object getValue() {
+        return null;
+   }
 }

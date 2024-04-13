@@ -16,8 +16,8 @@ import javafx.stage.FileChooser;
  */
 public class FileChoser extends DevListItems<File> {
 
-    public FileChoser(String title) {
-        super(title);
+    public FileChoser(String name,String title) {
+        super(name,title);
       
     }
 
@@ -39,5 +39,9 @@ public class FileChoser extends DevListItems<File> {
     public void deleteItem(DevItem<File> object) {
         this.vbox.getChildren().remove(object);
     }
+       @Override
+    public Object getValue() {
+        return null;
+   }
 
 }

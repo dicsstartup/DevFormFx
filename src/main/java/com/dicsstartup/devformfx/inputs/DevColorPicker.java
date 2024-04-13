@@ -15,22 +15,27 @@ public class DevColorPicker extends DevInput {
 
     ColorPicker colorPicker;
 
-    public DevColorPicker(String title) {
-        super(title, TypeDevInput.COLOR_PICKER);
+    public DevColorPicker(String name, String title) {
+        super(name, title, TypeDevInput.COLOR_PICKER);
         this.colorPicker = new ColorPicker();
         configInitial();
     }
 
-    public DevColorPicker(String title, Color color) {
-        super(title, TypeDevInput.COLOR_PICKER);
-         this.colorPicker = new ColorPicker(color);
-         configInitial();
+    public DevColorPicker(String name, String title, Color color) {
+        super(name, title, TypeDevInput.COLOR_PICKER);
+        this.colorPicker = new ColorPicker(color);
+        configInitial();
     }
-    
-    private void configInitial(){
+
+    private void configInitial() {
         this.setSpacing(5);
         this.colorPicker.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        this.getChildren().addAll(this.title,this.colorPicker);
+        this.getChildren().addAll(this.title, this.colorPicker);
     }
+    
+       @Override
+    public Object getValue() {
+        return this.colorPicker.getValue();
+   }
 
 }

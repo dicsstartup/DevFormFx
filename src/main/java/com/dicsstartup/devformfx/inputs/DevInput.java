@@ -11,24 +11,28 @@ import javafx.scene.layout.VBox;
  *
  * @author Didier
  */
-public class DevInput extends VBox {
-    
+public abstract class DevInput extends VBox {
+
+    protected String name;
     protected Label title;
     protected Label error;
     protected TypeDevInput type;
 
-    public DevInput(String title,TypeDevInput type) {
+    public DevInput(String name, String title, TypeDevInput type) {
         super();
-        this.title= new Label(title);
-        this.error= new Label();
-        this.type= type;
-        
+        this.title = new Label(title);
+        this.error = new Label();
+        this.type = type;
     }
 
-    public void  addClassStyle(){
-         this.error.getStyleClass().add("error");
-         this.title.getStyleClass().add("label");
+    public void addClassStyle() {
+        this.getStyleClass().add("devInput");
+        this.error.getStyleClass().add("error");
+        this.title.getStyleClass().add("label");
     }
+    
+    public abstract Object getValue();
+    
 
     public Label getTitle() {
         return title;
@@ -48,6 +52,10 @@ public class DevInput extends VBox {
 
     public TypeDevInput getType() {
         return type;
+    }
+
+    public String getName() {
+        return name;
     }
     
 }

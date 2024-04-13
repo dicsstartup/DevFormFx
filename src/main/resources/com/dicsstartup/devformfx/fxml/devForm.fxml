@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane styleClass="blanco" stylesheets="@../style/theme_dark.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dicsstartup.devformfx.DevController">
+<AnchorPane styleClass="form" stylesheets="@../style/theme_dark.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dicsstartup.devformfx.DevController">
    <children>
-      <VBox fx:id="content" layoutY="14.0" prefHeight="337.0" prefWidth="600.0" spacing="10.0" styleClass="vbox" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox fx:id="content" layoutY="14.0" prefHeight="337.0" prefWidth="600.0" spacing="10.0" styleClass="inputs" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <padding>
             <Insets left="18.0" right="18.0" top="18.0" />
          </padding>
       </VBox>
-      <HBox fx:id="controls" layoutX="163.0" layoutY="509.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="600.0" styleClass="blanco" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <HBox fx:id="controls" layoutX="163.0" layoutY="509.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="50.0" prefWidth="600.0"  AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
    </children>
 </AnchorPane>

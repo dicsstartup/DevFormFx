@@ -15,29 +15,33 @@ public class DevSlider extends DevInput {
 
     Slider slider;
 
-    public DevSlider(String title,Orientation or) {
-        super(title, TypeDevInput.SLIDER);
+    public DevSlider(String name, String title, Orientation or) {
+        super(name, title, TypeDevInput.SLIDER);
         slider = new Slider();
-         configInitial(or);
+        configInitial(or);
     }
 
-    public DevSlider(String title ,Orientation or, double d, double d1, double d2) {
-        super(title, TypeDevInput.SLIDER);
+    public DevSlider(String name, String title, Orientation or, double d, double d1, double d2) {
+        super(name, title, TypeDevInput.SLIDER);
         slider = new Slider(d, d1, d2);
-         configInitial(or);
+        configInitial(or);
     }
 
-    private void configInitial(Orientation or){
+    private void configInitial(Orientation or) {
         slider.setOrientation(or);
         this.setSpacing(5);
         this.slider.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-         this.getChildren().addAll(this.title,this.slider);
+        this.getChildren().addAll(this.title, this.slider);
     }
-    
+
     public Slider getSlider() {
         return slider;
     }
     
+       @Override
+    public Object getValue() {
+        return this.slider.getValue();
+   }
     
-
+    
 }

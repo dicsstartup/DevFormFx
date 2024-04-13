@@ -11,14 +11,19 @@ import javafx.scene.control.CheckBox;
  * @author Didier
  */
 public class DevCheckBox extends DevInput {
-    
-    CheckBox check ;
-    
-    public DevCheckBox(String title,String value) {
-        super(title, TypeDevInput.CHECK_BOX);
-        check= new CheckBox(value);
-         this.setSpacing(5);
-        this.getChildren().addAll(this.title,this.check);
+
+    CheckBox check;
+
+    public DevCheckBox(String name, String title, String value) {
+        super(name, title, TypeDevInput.CHECK_BOX);
+        check = new CheckBox(value);
+        this.setSpacing(5);
+        this.getChildren().addAll(this.title, this.check);
     }
-    
+
+    @Override
+    public Object getValue() {
+        return check.isSelected();
+   }
+
 }

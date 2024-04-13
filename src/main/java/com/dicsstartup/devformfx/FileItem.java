@@ -6,8 +6,8 @@ package com.dicsstartup.devformfx;
 
 
 
-import com.dicsstartup.devformfx.Actions.DevAction;
-import com.dicsstartup.devformfx.Actions.DevTypeIcon;
+import com.dicsstartup.devformfx.Actions.DevActionSqueare;
+import com.dicsstartup.devformfx.Icons.DevIcon;
 import com.dicsstartup.devformfx.devlist.DeleteDevItem;
 import com.dicsstartup.devformfx.devlist.DevItem;
 import java.io.File;
@@ -35,8 +35,7 @@ public class FileItem extends DevItem<File> {
         GridPane.setValignment(this.peso, VPos.TOP);
        this.actions.setAlignment(Pos.CENTER_RIGHT);
        this.eliminarCallback=eliminarCallback;
-       DevAction delete = new DevAction(DevTypeIcon.DELETE.getSVG(), 'M','S' ,"#e8e8e8");
-       delete.getStyleClass().add("delete");
+       DevActionSqueare delete = new DevActionSqueare("small","primary",new DevIcon("delete","secondary","small"));
        delete.setOnAction(event -> {
             this.eliminarCallback.delete(this);
         });

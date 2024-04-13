@@ -14,23 +14,27 @@ public class DevComboBox extends DevInput {
 
     ComboBox comboBox;
 
-    public DevComboBox(String title) {
-        super(title, TypeDevInput.COMBO_BOX);
+    public DevComboBox(String name, String title) {
+        super(name, title, TypeDevInput.COMBO_BOX);
         comboBox = new ComboBox();
         configInitial();
     }
 
-    public DevComboBox(String title, ComboBox comboBox) {
-        super(title, TypeDevInput.COMBO_BOX);
+    public DevComboBox(String name, String title, ComboBox comboBox) {
+        super(name, title, TypeDevInput.COMBO_BOX);
         this.comboBox = comboBox;
         configInitial();
     }
-    
-    private void configInitial(){
+
+    private void configInitial() {
         this.setSpacing(5);
-        this.comboBox.setMaxSize(Double.MAX_VALUE,Double.MAX_VALUE);
-        this.getChildren().addAll(this.title,this.comboBox);
+        this.comboBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        this.getChildren().addAll(this.title, this.comboBox);
 
-    }   
+    }
 
+       @Override
+    public Object getValue() {
+        return this.comboBox.getValue();
+   }
 }
