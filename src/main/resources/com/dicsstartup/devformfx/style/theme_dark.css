@@ -1,49 +1,113 @@
 .root {
     /*paleta de color*/
-    blackc: #171717;
-    whitec: #e8e8e8;
+    primary: #171717;
+    secundary: #e8e8e8;
+    warn: red;
+    -fx-font-family: "Arial";
 }
 
-.blanco {
-    -fx-background-color: whitec;
+/*Formulario */
+.form {
+    -fx-background-color: secundary;
 }
 
-.vbox {
-    -fx-background-color: blackc;
+.form>.inputs {
+    -fx-background-color: primary;
     -fx-background-radius: 16px;
     -fx-max-width: 100%;
 }
 
-.titulo {
-    -fx-text-fill: whitec;
-    -fx-text-alignment: center;
-    -fx-font-family: 'Arial Black';
-    -fx-font-size: 24px;
-}
-
-GridPane {
+.form>GridPane {
     -fx-hgap: 10;
 }
 
-TextField {
-    -fx-font-family: "Arial";
+/*Inputs*/
+.devInput {}
+
+.devInput>.error {
+    -fx-text-fill: warn;
+}
+
+.devInput>.label {
+    -fx-text-fill: secundary;
+    -fx-font-weight: bold;
+}
+
+.devInput>TextField {
     -fx-font-size: 16px;
-    -fx-text-fill: whitec;
-    -fx-background-color: blackc;
-    -fx-focus-color: whitec;
+    -fx-text-fill: secundary;
+    -fx-background-color: primary;
+    -fx-focus-color: secundary;
     -fx-border-width: 1px;
-    -fx-border-color: whitec;
+    -fx-border-color: secundary;
     -fx-border-radius: 8px;
 }
 
-.error {
-    -fx-text-fill: red;
+/*Actions*/
+.devAction {
+    -fx-background-color: primary;
 }
 
-.label {
-    -fx-text-fill: whitec;
-    -fx-font-weight: bold;
+.devAction:pressed {
+    -fx-opacity: 0.7;
+}
 
+.devAction:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.devAction.smallheight {
+    -fx-pref-height: 32px;
+}
+
+.devAction.mediumheight {
+    -fx-pref-height: 44px;
+
+}
+
+.devAction.largeheight {
+    -fx-pref-height: 52px;
+}
+
+.devAction.smallwidth {
+    -fx-pref-width: 32px;
+}
+
+.devAction.mediumwidth {
+    -fx-pref-width: 44px;
+}
+
+.devAction.largewidth {
+    -fx-pref-width: 52px;
+}
+
+
+/*List*/
+.item {
+    -fx-background-color: primary;
+    -fx-background-radius: 6px;
+}
+
+.dev-add-item {
+    -fx-background-color: secundary;
+}
+
+
+/*Tools */
+.primaryB {
+    -fx-background-color: primary;
+}
+
+.secundaryB {
+    -fx-background-color: secundary;
+}
+
+.titulo {
+    -fx-text-fill: secundary;
+    -fx-text-alignment: center;
+    -fx-font-family: 'Arial Black';
+    -fx-font-size: 24px;
 }
 
 .scroll-pane>.viewport {
@@ -51,7 +115,7 @@ TextField {
 }
 
 .scroll-pane {
-    -fx-background-color: e8e8e8;
+    -fx-background-color: secundary;
     -fx-background-radius: 8px;
 }
 
@@ -75,31 +139,35 @@ TextField {
 
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
-    -fx-background-color: blackc;
+    -fx-background-color: primary;
     -fx-background-radius: 5em;
 }
 
-.item {
-    -fx-background-color: blackc;
-    -fx-background-radius: 6px;
+/*Icons*/
+.devIcon {}
+
+/*Sizes*/
+.devIcon.small {
+    -fx-max-height: 16px;
+    -fx-max-width: 16px;
 }
 
-.action {
-    -fx-background-color: blackc;
+.devIcon.medium {
+    -fx-max-height: 20px;
+    -fx-max-width: 20px;
 }
 
-.dev-add-item {
-    -fx-background-color: whitec;
+.devIcon.large {
+    -fx-max-height: 24px;
+    -fx-max-width: 24px;
 }
 
-.delete {
-    -fx-background-color: blackc;
+/*Icons*/
+
+.devIcon.add {
+    -fx-shape: "M 414.2857,-414.2857 H 20 V -545.71429 H 414.2857 V -940 h 131.42858 v 394.28571 H 940 V -414.2857 H 545.71428 V -20 H 414.2857 Z";
 }
 
-.dev-action:pressed {
-    -fx-opacity: 0.7;
-}
-.dev-action:hover {
-    -fx-scale-x	: 1.1;
-    -fx-scale-y	: 1.1;
+.devIcon.delete {
+    -fx-shape: "M280-120q-33 0-56.5-23.5T200-200v-520q-17 0-28.5-11.5T160-760q0-17 11.5-28.5T200-800h160q0-17 11.5-28.5T400-840h160q17 0 28.5 11.5T600-800h160q17 0 28.5 11.5T800-760q0 17-11.5 28.5T760-720v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM400-280q17 0 28.5-11.5T440-320v-280q0-17-11.5-28.5T400-640q-17 0-28.5 11.5T360-600v280q0 17 11.5 28.5T400-280Zm160 0q17 0 28.5-11.5T600-320v-280q0-17-11.5-28.5T560-640q-17 0-28.5 11.5T520-600v280q0 17 11.5 28.5T560-280ZM280-720v520-520Z";
 }

@@ -4,111 +4,73 @@
  */
 package com.dicsstartup.devformfx.Actions;
 
+import com.dicsstartup.devformfx.Icons.DevIcon;
 import javafx.scene.control.Button;
-import javafx.scene.shape.Circle;
 
 /**
  *
  * @author Didier
  */
-public class DevAction extends Button {
-    //type shape
-    public static final char CIRCLE = 'C';
-    public static final char SQUERE = 'S';
-    //type size
-    public static final char SMALL = 'S';
-    public static final char MEDIUM = 'M';
-    public static final char LARGE = 'L';
-
-    private char size;
-    private char type;
-    private DevIcon devicon;
-
-    public DevAction(String label, char size, char type) {
-        super(label);
+public abstract class DevAction extends Button {
+    
+    protected String size;
+    protected String backgroudColor;
+    protected DevIcon devicon;
+    
+    public DevAction(String size, String backgroudColor) {
         this.size = size;
-        this.type = type;
+        setBackgroudColor(backgroudColor);
         initialConfig();
     }
-
-    public DevAction(String label, String icon, char size, char type, String iconColor) {
+    
+    public DevAction(String label, String size, String backgroudColor) {
         super(label);
         this.size = size;
-        this.type = type;
-        this.devicon = new DevIcon(icon, iconColor, this.sizeIcon(this.size), this.sizeIcon(this.size));
+        setBackgroudColor(backgroudColor);
         initialConfig();
-
     }
-
-    public DevAction(String icon, char size, char type, String iconColor) {
+    
+    public DevAction(String label, String backgroudColor, String size, DevIcon icon) {
+        super(label);
+        setBackgroudColor(backgroudColor);
+        this.size = size;
+        this.devicon = icon;
+        initialConfig();
+        
+    }
+    
+    public DevAction(String size, String backgroudColor, DevIcon icon) {
         super();
         this.size = size;
-        this.type = type;
-        this.devicon = new DevIcon(icon, iconColor, this.sizeIcon(this.size), this.sizeIcon(this.size));
+        setBackgroudColor(backgroudColor);
+        this.devicon = icon;
         initialConfig();
     }
-
+    
     private void initialConfig() {
-        this.getStyleClass().add("dev-action");
-        if (type == CIRCLE) {
-            this.setShape(new Circle(35));
-            this.setPrefSize(sizes(this.size), sizes(this.size));
-        } else if (type == this.SQUERE) {
-            this.setStyle("-fx-background-radius:4px; ");
-            if (this.devicon != null) {
-                this.setPrefSize(sizes(this.size), sizes(this.size));
-            } else {
-                this.setPrefHeight(sizes(this.size));
-
-            }
-        }
+        this.getStyleClass().add("devAction");
         if (this.devicon != null) {
             this.setGraphic(devicon);
         } else {
             this.setGraphic(devicon);
-
         }
-
     }
-
-    public char getSize() {
-        return size;
-    }
-
-    public void setSize(char size) {
-        this.size = size;
-    }
-
+    
     public DevIcon getDevicon() {
         return devicon;
     }
-
-    public double sizes(char size) {
-        switch (size) {
-            case SMALL:
-                return 32;
-
-            case MEDIUM:
-                return 44;
-
-            case LARGE:
-                return 52;
-        }
-        return Button.USE_COMPUTED_SIZE;
+    
+    public String getSize() {
+        return size;
     }
-
-    public double sizeIcon(char size) {
-        switch (size) {
-            case SMALL:
-                return 16;
-
-            case MEDIUM:
-                return 20;
-
-            case LARGE:
-                return 24;
-        }
-        return Button.USE_COMPUTED_SIZE;
+    
+    public String getBackgroudColor() {
+        return backgroudColor;
     }
-
+    
+    public void setBackgroudColor(String backgroudColor) {
+        this.setStyle("-fx-background-color:" + backgroudColor + ";");
+        this.backgroudColor = backgroudColor;
+    }
+    
 }

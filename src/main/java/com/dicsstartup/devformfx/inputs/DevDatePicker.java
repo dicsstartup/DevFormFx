@@ -15,23 +15,27 @@ public class DevDatePicker extends DevInput {
 
     DatePicker date = new DatePicker();
 
-    public DevDatePicker(String title) {
-        super(title, TypeDevInput.DATE_PICKER);
+    public DevDatePicker(String name, String title) {
+        super(name, title, TypeDevInput.DATE_PICKER);
         date = new DatePicker();
         configInitial();
     }
 
-    public DevDatePicker(String title, LocalDate ld) {
-        super(title, TypeDevInput.DATE_PICKER);
+    public DevDatePicker(String name, String title, LocalDate ld) {
+        super(name, title, TypeDevInput.DATE_PICKER);
         date = new DatePicker(ld);
         configInitial();
     }
 
     private void configInitial() {
-        date.setMaxSize(Double.MAX_VALUE,Double.MAX_VALUE);
+        date.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         date.setMaxHeight(Double.MAX_VALUE);
         this.setSpacing(5);
         this.getChildren().addAll(this.title, this.date);
     }
 
+       @Override
+    public Object getValue() {
+        return this.date.getChronology();
+   }
 }

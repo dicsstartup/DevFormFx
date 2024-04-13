@@ -10,26 +10,31 @@ import javafx.scene.control.ChoiceBox;
  *
  * @author Didier
  */
-public class DevChoiceBox extends DevInput{
-    
+public class DevChoiceBox extends DevInput {
+
     ChoiceBox choiseBox;
-    
-    public DevChoiceBox(String title) {
-        super(title, TypeDevInput.CHOICE_BOX);
-        choiseBox= new ChoiceBox();
+
+    public DevChoiceBox(String name, String title) {
+        super(name, title, TypeDevInput.CHOICE_BOX);
+        choiseBox = new ChoiceBox();
         configInitial();
     }
-    
-     public DevChoiceBox(String title,ChoiceBox choiseBox) {
-        super(title, TypeDevInput.CHOICE_BOX);
-        this.choiseBox=choiseBox;
+
+    public DevChoiceBox(String name, String title, ChoiceBox choiseBox) {
+        super(name, title, TypeDevInput.CHOICE_BOX);
+        this.choiseBox = choiseBox;
         configInitial();
-        
+
+    }
+
+    private void configInitial() {
+        this.setSpacing(5);
+        this.choiseBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+        this.getChildren().addAll(this.title, this.choiseBox);
     }
     
-     private void configInitial(){
-         this.setSpacing(5);
-         this.choiseBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-         this.getChildren().addAll(this.title,this.choiseBox);
-     }
+       @Override
+    public Object getValue() {
+        return this.choiseBox.getValue();
+   }
 }

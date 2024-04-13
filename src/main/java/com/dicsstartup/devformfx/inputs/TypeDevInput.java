@@ -22,6 +22,4 @@ public enum TypeDevInput {
     SPINNER,
     COLOR_PICKER,
     LIST_ITEMS;
-
- 
 }

@@ -14,11 +14,15 @@ public class DevRadioButton extends DevInput {
 
     RadioButton RBotton;
 
-    public DevRadioButton(String title, String label) {
-        super(title, TypeDevInput.RADIO_BUTTON);
+    public DevRadioButton(String name, String title, String label) {
+        super(name, title, TypeDevInput.RADIO_BUTTON);
         RBotton = new RadioButton(label);
         this.setSpacing(5);
         this.getChildren().addAll(this.title, this.RBotton);
     }
 
+       @Override
+    public Object getValue() {
+        return this.RBotton.isSelected();
+   }
 }

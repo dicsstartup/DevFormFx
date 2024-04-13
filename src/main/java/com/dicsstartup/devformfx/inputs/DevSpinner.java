@@ -11,15 +11,20 @@ import javafx.scene.control.Spinner;
  * @author Didier
  */
 public class DevSpinner extends DevInput {
-    
+
     Spinner spinner;
-    
-    public DevSpinner(String title, Spinner spinner) {
-        super(title, TypeDevInput.SPINNER);
-        this.spinner=spinner;
+
+    public DevSpinner(String name, String title, Spinner spinner) {
+        super(name, title, TypeDevInput.SPINNER);
+        this.spinner = spinner;
         this.setSpacing(5);
         this.spinner.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        this.getChildren().addAll(this.title,this.spinner);
+        this.getChildren().addAll(this.title, this.spinner);
     }
     
+       @Override
+    public Object getValue() {
+        return this.spinner.getValue();
+   }
+
 }

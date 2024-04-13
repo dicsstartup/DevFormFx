@@ -4,9 +4,8 @@
  */
 package com.dicsstartup.devformfx.devlist;
 
-
-import com.dicsstartup.devformfx.Actions.DevAction;
-import com.dicsstartup.devformfx.Actions.DevTypeIcon;
+import com.dicsstartup.devformfx.Actions.DevActionCircle;
+import com.dicsstartup.devformfx.Icons.DevIcon;
 import com.dicsstartup.devformfx.inputs.DevInput;
 import com.dicsstartup.devformfx.inputs.TypeDevInput;
 import java.util.ArrayList;
@@ -23,21 +22,21 @@ import javafx.scene.layout.VBox;
  */
 abstract public class DevListItems<T> extends DevInput {
 
-    public DevAction add;
+    public DevActionCircle add;
     AnchorPane header;
     public VBox vbox;
     ScrollPane scroll;
     public List<DevItem<T>> list;
     public DeleteDevItem deleteCallback;
 
-    public DevListItems(String title) {
-        super(title, TypeDevInput.LIST_ITEMS);
+    public DevListItems(String name, String title) {
+        super(name, title, TypeDevInput.LIST_ITEMS);
         initialConfig();
 
     }
 
     private void initialConfig() {
-        this.add = new DevAction(DevTypeIcon.ADD.getSVG(), 'S', 'C', "blackc");
+        this.add = new DevActionCircle("medium","primary",new DevIcon("add","secundary","medium"));
         this.add.getStyleClass().add("dev-add-item");
         this.header = new AnchorPane();
         this.vbox = new VBox();
