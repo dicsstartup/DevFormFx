@@ -30,7 +30,6 @@ public class DevIcon extends Region {
     public void style() {
         this.getStyleClass().addAll("devIcon", size,icon);
         this.setStyle("-fx-background-color:"+color+";");
-                System.out.println(this.getStyleClass().toString());
     }
 
     public String getIcon() {

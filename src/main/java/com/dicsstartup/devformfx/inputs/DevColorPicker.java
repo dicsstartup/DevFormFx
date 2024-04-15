@@ -37,5 +37,8 @@ public class DevColorPicker extends DevInput {
     public Object getValue() {
         return this.colorPicker.getValue();
    }
+    @Override
+    public void addError(String message) {
+    }
 
 }

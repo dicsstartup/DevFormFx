@@ -25,4 +25,7 @@ public class DevTextArea extends DevInput {
     public Object getValue() {
         return this.area.getText();
    }
+    @Override
+    public void addError(String message) {
+    }
 }

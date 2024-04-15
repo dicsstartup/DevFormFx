@@ -37,4 +37,7 @@ public class DevChoiceBox extends DevInput {
     public Object getValue() {
         return this.choiseBox.getValue();
    }
+    @Override
+    public void addError(String message) {
+    }
 }

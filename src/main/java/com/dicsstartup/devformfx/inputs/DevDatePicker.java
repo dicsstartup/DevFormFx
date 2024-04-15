@@ -38,4 +38,7 @@ public class DevDatePicker extends DevInput {
     public Object getValue() {
         return this.date.getChronology();
    }
+    @Override
+    public void addError(String message) {
+    }
 }

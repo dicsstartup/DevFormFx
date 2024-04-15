@@ -26,4 +26,7 @@ public class DevCheckBox extends DevInput {
         return check.isSelected();
    }
 
+    @Override
+    public void addError(String message) {
+    }
 }

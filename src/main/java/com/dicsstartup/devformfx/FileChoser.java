@@ -44,4 +44,9 @@ public class FileChoser extends DevListItems<File> {
         return null;
    }
 
+    @Override
+    public void addError(String message) {
+        
+    }
+
 }

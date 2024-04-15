@@ -42,6 +42,9 @@ public class DevSlider extends DevInput {
     public Object getValue() {
         return this.slider.getValue();
    }
+    @Override
+    public void addError(String message) {
+    }
     
     
 }

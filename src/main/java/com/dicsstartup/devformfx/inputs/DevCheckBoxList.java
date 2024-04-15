@@ -57,5 +57,8 @@ public class DevCheckBoxList extends DevInput {
         }
       return null;
    }
+    @Override
+    public void addError(String message) {
+    }
 
 }
