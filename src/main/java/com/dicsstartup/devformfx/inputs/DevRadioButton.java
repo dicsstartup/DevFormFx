@@ -25,4 +25,7 @@ public class DevRadioButton extends DevInput {
     public Object getValue() {
         return this.RBotton.isSelected();
    }
+    @Override
+    public void addError(String message) {
+    }
 }

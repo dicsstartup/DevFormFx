@@ -23,15 +23,18 @@ public abstract class DevInput extends VBox {
         this.title = new Label(title);
         this.error = new Label();
         this.type = type;
+        addClassStyle();
     }
 
     public void addClassStyle() {
-        this.getStyleClass().add("devInput");
-        this.error.getStyleClass().add("error");
-        this.title.getStyleClass().add("label");
+        this.getStyleClass().add(ClassCSS.DEV_INPUT);
+        this.error.getStyleClass().add("label_error");
+        this.title.getStyleClass().add("title");
     }
     
     public abstract Object getValue();
+    
+    public abstract void addError(String message);
     
 
     public Label getTitle() {

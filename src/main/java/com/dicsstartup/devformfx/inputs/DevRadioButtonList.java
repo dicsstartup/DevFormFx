@@ -59,4 +59,7 @@ public class DevRadioButtonList extends DevInput {
     public Object getValue() {
         return null;
    }
+    @Override
+    public void addError(String message) {
+    }
 }

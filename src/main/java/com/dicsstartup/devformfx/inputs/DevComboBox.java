@@ -37,4 +37,7 @@ public class DevComboBox extends DevInput {
     public Object getValue() {
         return this.comboBox.getValue();
    }
+    @Override
+    public void addError(String message) {
+    }
 }

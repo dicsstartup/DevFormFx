@@ -26,5 +26,8 @@ public class DevSpinner extends DevInput {
     public Object getValue() {
         return this.spinner.getValue();
    }
+    @Override
+    public void addError(String message) {
+    }
 
 }

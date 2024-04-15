@@ -3,6 +3,7 @@
     primary: #171717;
     secundary: #e8e8e8;
     warn: red;
+    correct : #0ff80f;
     -fx-font-family: "Arial";
 }
 
@@ -13,7 +14,7 @@
 
 .form>.inputs {
     -fx-background-color: primary;
-    -fx-background-radius: 16px;
+    -fx-background-radius: 12px;
     -fx-max-width: 100%;
 }
 
@@ -24,23 +25,35 @@
 /*Inputs*/
 .devInput {}
 
-.devInput>.error {
+.devInput > .label_error {
     -fx-text-fill: warn;
 }
 
-.devInput>.label {
+.devInput >.title {
     -fx-text-fill: secundary;
     -fx-font-weight: bold;
 }
 
-.devInput>TextField {
+.devInput > .devTextField {
     -fx-font-size: 16px;
     -fx-text-fill: secundary;
     -fx-background-color: primary;
     -fx-focus-color: secundary;
     -fx-border-width: 1px;
     -fx-border-color: secundary;
-    -fx-border-radius: 8px;
+    -fx-border-radius: 6px;
+}
+
+.devInput > .devTextField.error {
+    -fx-text-fill: warn;
+    -fx-focus-color: warn;
+    -fx-border-color: warn;
+}
+
+.devInput > .devTextField.correct {
+    -fx-text-fill: correct;
+    -fx-focus-color: correct;
+    -fx-border-color: correct;
 }
 
 /*Actions*/
