@@ -40,4 +40,11 @@ public class DevComboBox extends DevInput {
     @Override
     public void addError(String message) {
     }
+        @Override
+    public void clearError() {
+    }
+
+    @Override
+    public void clean() {
+    }
 }

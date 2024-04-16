@@ -31,7 +31,7 @@ public class DevTextField extends DevInput {
         this.setSpacing(5);
         textField.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.getChildren().addAll(this.title, this.textField, this.error);
-        this.textField.getStyleClass().add("devTextField");
+        this.textField.getStyleClass().add(ClassCSS.DEVTEXTFIELD);
     }
 
     @Override
@@ -42,16 +42,18 @@ public class DevTextField extends DevInput {
     @Override
     public void addError(String message) {
         error.setText(message);
-        addStyleClass(ClassCSS.ERROR);
-        removeStyleClass(ClassCSS.CORRECT);
+       ClassCSS.addStyleClass(this.textField,ClassCSS.ERROR);
+        ClassCSS.removeStyleClass(this.textField,ClassCSS.CORRECT);
     }
     
+    @Override
     public void clean() {
         clearError();
         textField.setText("");
-        removeStyleClass(ClassCSS.ERROR);
+          ClassCSS.removeStyleClass(this.textField,ClassCSS.ERROR);
     }
 
+    @Override
     public void clearError() {
         error.setText("");
         textField.getStyleClass().remove(ClassCSS.ERROR);
@@ -81,7 +83,7 @@ public class DevTextField extends DevInput {
     public void validate() {
         if (isValid()) {
             if (isStyleCorrect) {
-                addStyleClass(ClassCSS.CORRECT);
+                ClassCSS.addStyleClass(this.textField,ClassCSS.CORRECT);
             }
             clearError();
         }
@@ -91,17 +93,6 @@ public class DevTextField extends DevInput {
         textField.textProperty().addListener((observable, oldValue, newValue) -> validate());
     }
 
-    public void removeStyleClass(String c) {
-        if (this.textField.getStyleClass().contains(c)) {
-            this.textField.getStyleClass().remove(c);
-        }
-    }
-
-    public void addStyleClass(String c) {
-        if (!this.textField.getStyleClass().contains(c)) {
-            this.textField.getStyleClass().add(c);
-        }
-    }
 
     public List<Validation> getPatterns() {
         return patterns;
