@@ -48,5 +48,12 @@ public class FileChoser extends DevListItems<File> {
     public void addError(String message) {
         
     }
+        @Override
+    public void clearError() {
+    }
+
+    @Override
+    public void clean() {
+    }
 
 }

@@ -23,25 +23,62 @@
 }
 
 /*Inputs*/
-.devInput {}
+.devInput {
+ 
+}
 
-.devInput > .label_error {
+.label_error {
     -fx-text-fill: warn;
 }
 
-.devInput >.title {
+.title {
     -fx-text-fill: secundary;
     -fx-font-weight: bold;
 }
 
-.devInput > .devTextField {
+/*DevTextArea*/
+
+.devInput > .devTextArea{
+    -fx-wrap-text: true;
     -fx-font-size: 16px;
-    -fx-text-fill: secundary;
     -fx-background-color: primary;
     -fx-focus-color: secundary;
     -fx-border-width: 1px;
     -fx-border-color: secundary;
     -fx-border-radius: 6px;
+    -fx-text-fill: secundary;
+}
+
+
+.devInput > .devTextArea.error {
+    -fx-text-fill: warn;
+    -fx-focus-color: warn;
+    -fx-border-color: warn;
+}
+
+ .devTextArea .content {
+    -fx-background-color: primary;
+    -fx-border-radius: 6px;
+}
+.devTextArea .scroll-pane {
+    -fx-background-color: primary;
+    -fx-border-radius: 6px;
+}
+
+.devInput .maxlabel{
+    -fx-text-alignment: RIGHT;
+    -fx-text-fill: secundary;
+}
+
+/*DevTextField*/
+.devInput > .devTextField {
+    -fx-font-size: 16px;
+    -fx-background-color: primary;
+    -fx-focus-color: secundary;
+    -fx-border-width: 1px;
+    -fx-border-color: secundary;
+    -fx-border-radius: 6px;
+    -fx-text-fill: secundary;
 }
 
 .devInput > .devTextField.error {

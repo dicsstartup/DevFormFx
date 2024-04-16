@@ -31,11 +31,14 @@ public abstract class DevInput extends VBox {
         this.error.getStyleClass().add("label_error");
         this.title.getStyleClass().add("title");
     }
-    
+
     public abstract Object getValue();
-    
+
     public abstract void addError(String message);
-    
+
+    public abstract void clearError();
+
+    public abstract void clean();
 
     public Label getTitle() {
         return title;
@@ -60,5 +63,5 @@ public abstract class DevInput extends VBox {
     public String getName() {
         return name;
     }
-    
+
 }
