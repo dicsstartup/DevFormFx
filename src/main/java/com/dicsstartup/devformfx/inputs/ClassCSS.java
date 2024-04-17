@@ -20,6 +20,10 @@ public class ClassCSS {
     public static final String MAXLABEL = "maxlabel";
 
     public static final String DEVTEXTFIELD = "devTextField";
+    //
+    public static final String DEVPASSWORDFIELD = "devPassWordField";
+    public static final String VISIBILITY = "visibility";
+    public static final String VISIBILITY_OFF = "visibility_off";
     //status
     public static final String ERROR = "error";
     public static final String CORRECT = "correct";
