@@ -10,6 +10,7 @@ package com.dicsstartup.devformfx.inputs;
  */
 public enum TypeDevInput {
     TEXT_FIELD,
+    PASSWORD_FIELD,
     TEXT_AREA,
     CHECK_BOX,
     CHECK_BOX_LIST,

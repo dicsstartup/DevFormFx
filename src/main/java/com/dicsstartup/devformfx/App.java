@@ -1,5 +1,6 @@
 package com.dicsstartup.devformfx;
 
+import com.dicsstartup.devformfx.inputs.DevPasswordField;
 import com.dicsstartup.devformfx.inputs.DevTextField;
 import com.dicsstartup.devformfx.inputs.Validation;
 import javafx.application.Application;
@@ -21,8 +22,9 @@ public class App extends Application {
         form.grid.addColsWithWidth(100);
         form.grid.setHgap(10);
         form.grid.setVgap(10);
-        DevTextField texto= new DevTextField("name","Nombre");
+        DevPasswordField texto= new DevPasswordField("name","Nombre");
         texto.addPattern(true,new Validation("[0-9]+","No es un numero."));
+        texto.setIsStyleCorrect(true);
         form.addInput(texto, 0, 0);
         
         DevTextField color= new DevTextField("color","Color");
