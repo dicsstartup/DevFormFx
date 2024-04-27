@@ -26,7 +26,7 @@ import javafx.scene.paint.Color;
 class VisiblePasswordFieldSkin extends TextFieldSkin {
 
 private final Button actionButton = new Button("View");
-private final DevIcon actionIcon= new DevIcon(ClassCSS.VISIBILITY ,"secundary","rectangular_small");
+private final DevIcon actionIcon= new DevIcon(enumCSS.VISIBILITY ,"secundary","ic_password");
 
 private boolean mask = true;
 
@@ -37,7 +37,6 @@ public VisiblePasswordFieldSkin(PasswordField textField) {
     actionButton.setPrefSize(40,20);
     actionButton.setFocusTraversable(false);
     actionButton.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, new Insets(0))));
-
     getChildren().add(actionButton);
     actionButton.setCursor(Cursor.HAND);
     actionButton.toFront();
@@ -45,18 +44,17 @@ public VisiblePasswordFieldSkin(PasswordField textField) {
     System.out.println(actionIcon.getStyle());
     actionButton.setVisible(true);
     actionButton.setOnMouseClicked(event -> {
-
         if(mask) {
-            actionIcon.setIcon(ClassCSS.VISIBILITY_OFF);
+            actionIcon.setIcon(enumCSS.VISIBILITY_OFF);
+            actionIcon.setSize(enumCSS.SIZE_PASSWORD_OFF);
             mask = false;
         } else {
-           actionIcon.setIcon(ClassCSS.VISIBILITY);
+           actionIcon.setIcon(enumCSS.VISIBILITY);
+           actionIcon.setSize(enumCSS.SIZE_PASSWORD);
             mask = true;
         }
         textField.setText(textField.getText());
-
         textField.end();
-
     });
 
     textField.textProperty().addListener((observable, oldValue, newValue) -> actionButton.setVisible(!newValue.isEmpty()));

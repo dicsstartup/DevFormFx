@@ -34,7 +34,7 @@ public class DevPasswordField extends DevInput {
         passwordField.setSkin(this.visibility);
         passwordField.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.getChildren().addAll(this.title, this.passwordField, this.error);
-        this.passwordField.getStyleClass().add(ClassCSS.DEVTEXTFIELD);
+        this.passwordField.getStyleClass().add(enumCSS.DEVTEXTFIELD);
     }
 
     @Override
@@ -45,21 +45,21 @@ public class DevPasswordField extends DevInput {
     @Override
     public void addError(String message) {
         error.setText(message);
-       ClassCSS.addStyleClass(this.passwordField,ClassCSS.ERROR);
-        ClassCSS.removeStyleClass(this.passwordField,ClassCSS.CORRECT);
+       enumCSS.addStyleClass(this.passwordField,enumCSS.ERROR);
+       enumCSS.removeStyleClass(this.passwordField,enumCSS.CORRECT);
     }
     
     @Override
     public void clean() {
         clearError();
         passwordField.setText("");
-        ClassCSS.removeStyleClass(this.passwordField,ClassCSS.ERROR);
+        enumCSS.removeStyleClass(this.passwordField,enumCSS.ERROR);
     }
 
     @Override
     public void clearError() {
         error.setText("");
-        passwordField.getStyleClass().remove(ClassCSS.ERROR);
+        passwordField.getStyleClass().remove(enumCSS.ERROR);
     }
 
     public void addPattern(Validation pattern) {
@@ -86,7 +86,7 @@ public class DevPasswordField extends DevInput {
     public void validate() {
         if (isValid()) {
             if (isStyleCorrect) {
-                ClassCSS.addStyleClass(this.passwordField,ClassCSS.CORRECT);
+                enumCSS.addStyleClass(this.passwordField,enumCSS.CORRECT);
             }
             clearError();
         }

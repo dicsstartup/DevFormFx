@@ -3,7 +3,7 @@
     primary: #171717;
     secundary: #e8e8e8;
     warn: red;
-    correct : #0ff80f;
+    correct: #0ff80f;
     -fx-font-family: "Arial";
 }
 
@@ -23,9 +23,7 @@
 }
 
 /*Inputs*/
-.devInput {
- 
-}
+.devInput {}
 
 .label_error {
     -fx-text-fill: warn;
@@ -38,7 +36,7 @@
 
 /*DevTextArea*/
 
-.devInput > .devTextArea{
+.devInput>.devTextArea {
     -fx-wrap-text: true;
     -fx-font-size: 16px;
     -fx-background-color: primary;
@@ -50,28 +48,29 @@
 }
 
 
-.devInput > .devTextArea.error {
+.devInput>.devTextArea.error {
     -fx-text-fill: warn;
     -fx-focus-color: warn;
     -fx-border-color: warn;
 }
 
- .devTextArea .content {
+.devTextArea .content {
     -fx-background-color: primary;
     -fx-border-radius: 6px;
 }
+
 .devTextArea .scroll-pane {
     -fx-background-color: primary;
     -fx-border-radius: 6px;
 }
 
-.devInput .maxlabel{
+.devInput .maxlabel {
     -fx-text-alignment: RIGHT;
     -fx-text-fill: secundary;
 }
 
 /*DevTextField*/
-.devInput > .devTextField {
+.devInput>.devTextField {
     -fx-font-size: 16px;
     -fx-background-color: primary;
     -fx-focus-color: secundary;
@@ -81,20 +80,20 @@
     -fx-text-fill: secundary;
 }
 
-.devInput > .devTextField.error {
+.devInput>.devTextField.error {
     -fx-text-fill: warn;
     -fx-focus-color: warn;
     -fx-border-color: warn;
 }
 
-.devInput > .devTextField.correct {
+.devInput>.devTextField.correct {
     -fx-text-fill: correct;
     -fx-focus-color: correct;
     -fx-border-color: correct;
 }
 
 /*DevPassWordField*/
-.devInput > .devPassWordField {
+.devInput>.devPassWordField {
     -fx-font-size: 16px;
     -fx-background-color: primary;
     -fx-focus-color: secundary;
@@ -104,16 +103,47 @@
     -fx-text-fill: secundary;
 }
 
-.devInput > .devPassWordField.error {
+.devInput>.devPassWordField.error {
     -fx-text-fill: warn;
     -fx-focus-color: warn;
     -fx-border-color: warn;
 }
 
-.devInput > .devPassWordField.correct {
+.devInput>.devPassWordField.correct {
     -fx-text-fill: correct;
     -fx-focus-color: correct;
     -fx-border-color: correct;
+}
+
+.devIcon.ic_password {
+    -fx-max-height: 14px;
+    -fx-max-width: 24px;
+}
+
+.devIcon.ic_password_off {
+    -fx-max-height: 17px;
+    -fx-max-width: 24px;
+}
+
+/*DevCheckBoxes*/
+.devInput>.box>.devCheckBox  {
+    -fx-alignment: center;
+    -fx-text-fill: secundary;
+}
+
+.devInput>.box>.devCheckBox .box {
+    -fx-background-color: primary;
+    -fx-border-color: secundary;
+    -fx-border-radius: 2px;
+}
+
+.devInput>.box>.devCheckBox:selected .mark {
+    -fx-background-color: primary;
+    -fx-shape: "M1.73,12.91 8.1,19.28 22.79,4.59 22.79,1.59 8.1,16.28 1.73,9.91";
+}
+
+.devInput>.box>.devCheckBox:selected .box {
+    -fx-background-color: secundary;
 }
 
 /*Actions*/
@@ -236,10 +266,6 @@
     -fx-max-width: 24px;
 }
 
-.devIcon.rectangular_small {
-    -fx-max-height: 16px;
-    -fx-max-width: 24px;
-}
 /*Icons*/
 
 .devIcon.add {
