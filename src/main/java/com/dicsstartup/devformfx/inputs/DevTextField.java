@@ -31,7 +31,7 @@ public class DevTextField extends DevInput {
         this.setSpacing(5);
         textField.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.getChildren().addAll(this.title, this.textField, this.error);
-        this.textField.getStyleClass().add(ClassCSS.DEVTEXTFIELD);
+        this.textField.getStyleClass().add(enumCSS.DEVTEXTFIELD);
     }
 
     @Override
@@ -42,21 +42,21 @@ public class DevTextField extends DevInput {
     @Override
     public void addError(String message) {
         error.setText(message);
-       ClassCSS.addStyleClass(this.textField,ClassCSS.ERROR);
-        ClassCSS.removeStyleClass(this.textField,ClassCSS.CORRECT);
+       enumCSS.addStyleClass(this.textField,enumCSS.ERROR);
+        enumCSS.removeStyleClass(this.textField,enumCSS.CORRECT);
     }
     
     @Override
     public void clean() {
         clearError();
         textField.setText("");
-          ClassCSS.removeStyleClass(this.textField,ClassCSS.ERROR);
+          enumCSS.removeStyleClass(this.textField,enumCSS.ERROR);
     }
 
     @Override
     public void clearError() {
         error.setText("");
-        textField.getStyleClass().remove(ClassCSS.ERROR);
+        textField.getStyleClass().remove(enumCSS.ERROR);
     }
 
     public void addPattern(Validation pattern) {
@@ -83,7 +83,7 @@ public class DevTextField extends DevInput {
     public void validate() {
         if (isValid()) {
             if (isStyleCorrect) {
-                ClassCSS.addStyleClass(this.textField,ClassCSS.CORRECT);
+                enumCSS.addStyleClass(this.textField,enumCSS.CORRECT);
             }
             clearError();
         }

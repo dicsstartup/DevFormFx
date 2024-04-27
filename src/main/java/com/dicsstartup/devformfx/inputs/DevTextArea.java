@@ -38,7 +38,7 @@ public class DevTextArea extends DevInput {
     }
 
     private void config() {
-        this.maxLabel.getStyleClass().add(ClassCSS.MAXLABEL);
+        this.maxLabel.getStyleClass().add(enumCSS.MAXLABEL);
         this.footer = new HBox();
         this.footer.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.error.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
@@ -48,7 +48,7 @@ public class DevTextArea extends DevInput {
         this.footer.getChildren().addAll(this.error, this.maxLabel);
         this.setSpacing(5);
         this.getChildren().addAll(this.title, this.area, this.footer);
-        this.area.getStyleClass().add(ClassCSS.DEVTEXTAREA);
+        this.area.getStyleClass().add(enumCSS.DEVTEXTAREA);
     }
 
     public void addMaxLength(int max) {
@@ -73,20 +73,20 @@ public class DevTextArea extends DevInput {
     @Override
     public void addError(String message) {
         error.setText(message);
-        ClassCSS.addStyleClass(this.area, ClassCSS.ERROR);
+        enumCSS.addStyleClass(this.area, enumCSS.ERROR);
     }
 
     @Override
     public void clearError() {
         error.setText("");
-        this.area.getStyleClass().remove(ClassCSS.ERROR);
+        this.area.getStyleClass().remove(enumCSS.ERROR);
     }
 
     @Override
     public void clean() {
         this.clearError();
         this.area.setText("");
-        ClassCSS.removeStyleClass(this.area, ClassCSS.ERROR);
+        enumCSS.removeStyleClass(this.area, enumCSS.ERROR);
     }
 
     public int getMax() {

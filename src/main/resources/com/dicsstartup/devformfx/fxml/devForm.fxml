@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane styleClass="form" stylesheets="@../style/theme_dark.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dicsstartup.devformfx.DevController">
+<AnchorPane styleClass="form" stylesheets="@../style/DevFormFX.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dicsstartup.devformfx.DevController">
    <children>
       <VBox fx:id="content" layoutY="14.0" prefHeight="337.0" prefWidth="600.0" spacing="10.0" styleClass="inputs" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <padding>
