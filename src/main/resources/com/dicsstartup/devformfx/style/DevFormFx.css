@@ -1,9 +1,7 @@
-@import "DevPassWordField.css";
-@import "DevComboBox.css";
 .root {
     /*paleta de color*/
     primary: #171717;
-    secondary: #e8e8e8;
+    secundary: #e8e8e8;
     warn: red;
     correct: #0ff80f;
     -fx-font-family: "Arial";
@@ -11,7 +9,7 @@
 
 /*Formulario */
 .form {
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
 }
 
 .form>.inputs {
@@ -32,7 +30,7 @@
 }
 
 .title {
-    -fx-text-fill: secondary;
+    -fx-text-fill: secundary;
     -fx-font-weight: bold;
 }
 
@@ -42,11 +40,11 @@
     -fx-wrap-text: true;
     -fx-font-size: 16px;
     -fx-background-color: primary;
-    -fx-focus-color: secondary;
+    -fx-focus-color: secundary;
     -fx-border-width: 1px;
-    -fx-border-color: secondary;
+    -fx-border-color: secundary;
     -fx-border-radius: 6px;
-    -fx-text-fill: secondary;
+    -fx-text-fill: secundary;
 }
 
 
@@ -68,18 +66,18 @@
 
 .devInput .maxlabel {
     -fx-text-alignment: RIGHT;
-    -fx-text-fill: secondary;
+    -fx-text-fill: secundary;
 }
 
 /*DevTextField*/
 .devInput>.devTextField {
     -fx-font-size: 16px;
     -fx-background-color: primary;
-    -fx-focus-color: secondary;
+    -fx-focus-color: secundary;
     -fx-border-width: 1px;
-    -fx-border-color: secondary;
+    -fx-border-color: secundary;
     -fx-border-radius: 6px;
-    -fx-text-fill: secondary;
+    -fx-text-fill: secundary;
 }
 
 .devInput>.devTextField.error {
@@ -94,17 +92,48 @@
     -fx-border-color: correct;
 }
 
+/*DevPassWordField*/
+.devInput>.devPassWordField {
+    -fx-font-size: 16px;
+    -fx-background-color: primary;
+    -fx-focus-color: secundary;
+    -fx-border-width: 1px;
+    -fx-border-color: secundary;
+    -fx-border-radius: 6px;
+    -fx-text-fill: secundary;
+}
 
+.devInput>.devPassWordField.error {
+    -fx-text-fill: warn;
+    -fx-focus-color: warn;
+    -fx-border-color: warn;
+}
+
+.devInput>.devPassWordField.correct {
+    -fx-text-fill: correct;
+    -fx-focus-color: correct;
+    -fx-border-color: correct;
+}
+
+.devIcon.ic_password {
+    -fx-max-height: 14px;
+    -fx-max-width: 24px;
+}
+
+.devIcon.ic_password_off {
+    -fx-max-height: 17px;
+    -fx-max-width: 24px;
+}
 
 /*DevCheckBoxes*/
 .devInput>.box>.devCheckBox  {
     -fx-alignment: center;
-    -fx-text-fill: secondary;
+    -fx-text-fill: secundary;
 }
 
 .devInput>.box>.devCheckBox .box {
     -fx-background-color: primary;
-    -fx-border-color: secondary;
+    -fx-border-color: secundary;
     -fx-border-radius: 2px;
 }
 
@@ -114,7 +143,7 @@
 }
 
 .devInput>.box>.devCheckBox:selected .box {
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
 }
 
 
@@ -122,12 +151,12 @@
 
 .devInput>.box>.devSwitchButton:checked>.switchButton{
     -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.074), 0.2, 0.2, 0.2, 1); 
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
 }
 
 .devInput>.box>.devSwitchButton>.switchButton{
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 0.2, 0, 0, 0); 
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
     -fx-alignment: CENTER_LEFT;
     -fx-min-width: 15px;
     -fx-min-height: 15px;
@@ -193,7 +222,7 @@
 }
 
 .dev-add-item {
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
 }
 
 
@@ -203,11 +232,11 @@
 }
 
 .secundaryB {
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
 }
 
 .titulo {
-    -fx-text-fill: secondary;
+    -fx-text-fill: secundary;
     -fx-text-alignment: center;
     -fx-font-family: 'Arial Black';
     -fx-font-size: 24px;
@@ -218,7 +247,7 @@
 }
 
 .scroll-pane {
-    -fx-background-color: secondary;
+    -fx-background-color: secundary;
     -fx-background-radius: 8px;
 }
 

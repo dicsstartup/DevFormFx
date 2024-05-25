@@ -26,7 +26,7 @@ import javafx.scene.paint.Color;
 class VisiblePasswordFieldSkin extends TextFieldSkin {
 
 private final Button actionButton = new Button("View");
-private final DevIcon actionIcon= new DevIcon(enumCSS.VISIBILITY ,"secondary","ic_password");
+private final DevIcon actionIcon= new DevIcon(enumCSS.VISIBILITY ,"secundary","ic_password");
 
 private boolean mask = true;
 

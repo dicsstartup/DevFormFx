@@ -37,7 +37,7 @@ public class DevFormBuilder extends GridPane {
         grid.setMaxWidth(Double.MAX_VALUE);
         this.actions= new ArrayList();
         this.inputs= new ArrayList();
-        DevActionSqueare summit= new DevActionSqueare("large","primary",new DevIcon("add","secondary","large"));
+        DevActionSqueare summit= new DevActionSqueare("large","primary",new DevIcon("add","secundary","large"));
         this.actions.add(summit);
     }
 

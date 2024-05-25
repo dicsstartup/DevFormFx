@@ -39,8 +39,6 @@ public class DevColorPicker extends DevInput {
    }
     @Override
     public void addError(String message) {
-        enumCSS.addStyleClass(this,enumCSS.ERROR);
-        enumCSS.removeStyleClass(this,enumCSS.CORRECT);
     }
         @Override
     public void clearError() {
