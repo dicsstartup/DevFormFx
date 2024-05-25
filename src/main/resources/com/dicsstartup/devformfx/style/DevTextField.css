@@ -1,0 +1,22 @@
+/*DevTextField*/
+.devInput>.devTextField {
+    -fx-16px: 16px;
+    -fx-background-color: primary;
+    -fx-focus-color: secondary;
+    -fx-1px: 1px;
+    -fx-border-color: secondary;
+    -fx-8px: 8px;
+    -fx-text-fill: secondary;
+}
+
+.devInput>.devTextField.error {
+    -fx-text-fill: warn-color;
+    -fx-focus-color: warn-color;
+    -fx-border-color: warn-color;
+}
+
+.devInput>.devTextField.correct {
+    -fx-text-fill: correct-color;
+    -fx-focus-color: correct-color;
+    -fx-border-color: correct-color;
+}

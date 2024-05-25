@@ -12,11 +12,11 @@ import javafx.scene.control.ComboBox;
  */
 public class DevComboBox extends DevInput {
 
-    ComboBox comboBox;
+    private ComboBox comboBox;
 
     public DevComboBox(String name, String title) {
         super(name, title, TypeDevInput.COMBO_BOX);
-        comboBox = new ComboBox();
+        this.comboBox = new ComboBox();
         configInitial();
     }
 
@@ -29,8 +29,9 @@ public class DevComboBox extends DevInput {
     private void configInitial() {
         this.setSpacing(5);
         this.comboBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        this.getChildren().addAll(this.title, this.comboBox);
-
+        this.comboBox.getStyleClass().add("devComboBox");
+        this.getChildren().addAll(this.title, this.comboBox, this.error);
+     
     }
 
        @Override
@@ -39,12 +40,21 @@ public class DevComboBox extends DevInput {
    }
     @Override
     public void addError(String message) {
+        this.error.setText(message);
+        enumCSS.addStyleClass(this,enumCSS.ERROR);
+        enumCSS.removeStyleClass(this,enumCSS.CORRECT);
     }
         @Override
     public void clearError() {
+        this.error.setText("");
+        enumCSS.removeStyleClass(this,enumCSS.ERROR);
     }
 
     @Override
     public void clean() {
+        clearError();
+        this.comboBox.getEditor().clear();
+        this.comboBox.getSelectionModel().clearSelection();
+        enumCSS.removeStyleClass(this,enumCSS.ERROR);
     }
 }

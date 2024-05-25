@@ -1,0 +1,21 @@
+/*Inputs*/
+.devInput {}
+
+.label_error {
+    -fx-text-fill: warn-color;
+}
+
+.title {
+    -fx-text-fill: secondary;
+    -fx-font-weight: bold;
+}
+
+/*List*/
+.item {
+    -fx-background-color: primary;
+    -fx-background-radius: 8px;
+}
+
+.dev-add-item {
+    -fx-background-color: secondary;
+}

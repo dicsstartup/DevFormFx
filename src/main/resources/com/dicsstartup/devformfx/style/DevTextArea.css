@@ -1,0 +1,33 @@
+/*DevTextArea*/
+
+.devInput > .devTextArea {
+    -fx-wrap-text: true;
+    -fx-16px: 16px;
+    -fx-background-color: primary;
+    -fx-focus-color: secondary;
+    -fx-1px: 1px;
+    -fx-border-color: secondary;
+    -fx-8px: 8px;
+    -fx-text-fill: secondary;
+}
+
+.devInput > .devTextArea.error {
+    -fx-text-fill: warn-color;
+    -fx-focus-color: warn-color;
+    -fx-border-color: warn-color;
+}
+
+.devTextArea .content {
+    -fx-background-color: primary;
+    -fx-8px: 8px;
+}
+
+.devTextArea .scroll-pane {
+    -fx-background-color: primary;
+    -fx-8px: 8px;
+}
+
+.devInput .maxlabel {
+    -fx-text-alignment: right;
+    -fx-text-fill: secondary;
+}
