@@ -1,0 +1,26 @@
+/*DevSwitchButton*/
+
+.devInput>.box>.devSwitchButton:checked>.switchButton{
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.074), 0.2, 0.2, 0.2, 1); 
+    -fx-background-color: secondary;
+}
+
+.devInput>.box>.devSwitchButton>.switchButton{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 0.2, 0, 0, 0); 
+    -fx-background-color: secondary;
+    -fx-alignment: CENTER_LEFT;
+    -fx-min-width: 15px;
+    -fx-min-height: 15px;
+    -fx-max-width: 15px;
+    -fx-max-height: 15px;
+}
+.devInput>.box>.devSwitchButton>.back{
+    -fx-fill:#ced5da ;
+    -fx-min-width: 30px;
+    -fx-min-height: 10px;
+    -fx-max-width: 30px;
+    -fx-max-height: 10px;
+}
+.devInput>.box>.devSwitchButton:checked>.back{
+    -fx-fill: #61606068;
+}

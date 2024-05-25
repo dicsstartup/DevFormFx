@@ -1,0 +1,55 @@
+/*DevComboBox*/
+.devInput>.devComboBox{
+    -fx-background-color: primary;
+    -fx-text-fill: secondary;
+    -fx-border-color: secondary;
+    -fx-border-radius: 8px;
+    -fx-font-size: 16px;
+
+}
+
+.devInput>.devComboBox>.list-cell{
+    -fx-text-fill: secondary;
+    -fx-16px: 16px;
+}
+
+.devInput>.devComboBox:editable>.text-field{
+    -fx-text-fill: secondary;
+    -fx-background-color: primary;
+    -fx-font-size: 16px;
+}
+
+
+.devInput>.devComboBox>.arrow-button{
+    -fx-background-color: transparent;
+}
+
+.devInput>.devComboBox>.arrow-button>.arrow{
+    -fx-shape: "M480-360 280-560h400L480-360Z";
+    -fx-background-color: secondary;
+}
+.devInput>.devComboBox:showing>.arrow-button>.arrow{
+   -fx-rotate:180;
+}
+
+.combo-box-popup .list-view 
+{
+    -fx-background-color: secondary;
+    -fx-background-insets: 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6 ), 8, 0.0 , 0 , 0 );
+}    
+
+.combo-box-popup .list-view .list-cell 
+{
+    -fx-background-color: secondary;
+}
+
+.combo-box-popup .list-view .list-cell:hover
+{
+    -fx-background-color: primary;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background-color: primary;
+}

@@ -9,6 +9,17 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>github</id>
+            <name>Github dicsstartup Apache  Packages</name>
+            <url>https://maven.pkg.github.com/dicsstartup/DevFormFx</url>
+        </repository>
+    </distributionManagement>
+    
+    
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -22,6 +33,14 @@
         </dependency>
     </dependencies>
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.css</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
