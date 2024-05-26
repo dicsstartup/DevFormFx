@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import com.dicsstartup.devformfx.DevGrid;
@@ -17,21 +13,22 @@ public class DevSwitchButton extends DevInput {
     private boolean initvalue = false;
 
     public DevSwitchButton(String name, String title) {
-        super(name, title, TypeDevInput.SWITCHBUTTON);
+        super(name, title);
         button = new SwitchButton();
         box = new DevGrid();
-        init();
+        config();
     }
 
     public DevSwitchButton(String name, String title, boolean initvalue) {
-        super(name, title, TypeDevInput.SWITCHBUTTON);
+        super(name, title);
         button = new SwitchButton();
         box = new DevGrid();
         this.initvalue = initvalue;
-        init();
+        config();
     }
 
-    private void init() {
+    @Override
+    protected void config() {
         this.box.getStyleClass().add("box");
         this.button.getStyleClass().add("devSwitchButton");
         this.button.setChecked(initvalue);
@@ -42,8 +39,8 @@ public class DevSwitchButton extends DevInput {
     }
 
     @Override
-    public Object getValue() {
-        return button.IsChecked();
+    public InputValue getValue() {
+        return new InputValue(this.key, button.IsChecked());
     }
 
     @Override

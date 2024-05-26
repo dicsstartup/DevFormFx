@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import com.dicsstartup.devformfx.Icons.DevIcon;
@@ -18,71 +14,96 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 
-
 /**
+ * Clase VisiblePasswordFieldSkin que extiende TextFieldSkin para personalizar el comportamiento de un PasswordField.
+ * Proporciona un botón para mostrar/ocultar la contraseña.
  *
- * @author Didier
+ * Autor: Didier Piracoca
  */
 class VisiblePasswordFieldSkin extends TextFieldSkin {
 
-private final Button actionButton = new Button("View");
-private final DevIcon actionIcon= new DevIcon(enumCSS.VISIBILITY ,"secundary","ic_password");
+    // Botón de acción para mostrar/ocultar la contraseña
+    private final Button actionButton = new Button("View");
 
-private boolean mask = true;
+    // Icono del botón de acción
+    private final DevIcon actionIcon = new DevIcon(enumCSS.VISIBILITY, "secondary", enumCSS.SIZE_PASSWORD);
 
-public VisiblePasswordFieldSkin(PasswordField textField) {
+    // Bandera para indicar si la contraseña está enmascarada
+    private boolean mask = true;
 
-    super(textField);
-    actionButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
-    actionButton.setPrefSize(40,20);
-    actionButton.setFocusTraversable(false);
-    actionButton.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, new Insets(0))));
-    getChildren().add(actionButton);
-    actionButton.setCursor(Cursor.HAND);
-    actionButton.toFront();
-    actionButton.setGraphic(actionIcon);
-    System.out.println(actionIcon.getStyle());
-    actionButton.setVisible(true);
-    actionButton.setOnMouseClicked(event -> {
-        if(mask) {
-            actionIcon.setIcon(enumCSS.VISIBILITY_OFF);
-            actionIcon.setSize(enumCSS.SIZE_PASSWORD_OFF);
-            mask = false;
-        } else {
-           actionIcon.setIcon(enumCSS.VISIBILITY);
-           actionIcon.setSize(enumCSS.SIZE_PASSWORD);
-            mask = true;
-        }
-        textField.setText(textField.getText());
-        textField.end();
-    });
+    /**
+     * Constructor que configura el TextField y el botón de acción.
+     *
+     * @param textField El PasswordField asociado a este skin.
+     */
+    public VisiblePasswordFieldSkin(PasswordField textField) {
+        super(textField);
+        // Configuración del botón de acción
+        actionButton.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
+        actionButton.setPrefSize(40, 20);
+        actionButton.setFocusTraversable(false);
+        actionButton.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, new Insets(0))));
+        getChildren().add(actionButton);
+        actionButton.setCursor(Cursor.HAND);
+        actionButton.toFront();
+        actionButton.setGraphic(actionIcon);
+        actionButton.setVisible(true);
 
-    textField.textProperty().addListener((observable, oldValue, newValue) -> actionButton.setVisible(!newValue.isEmpty()));
+        // Evento para cambiar la visibilidad de la contraseña
+        actionButton.setOnMouseClicked(event -> {
+            if (mask) {
+                actionIcon.setIcon(enumCSS.VISIBILITY_OFF);
+                actionIcon.setSize(enumCSS.SIZE_PASSWORD_OFF);
+                mask = false;
+            } else {
+                actionIcon.setIcon(enumCSS.VISIBILITY);
+                actionIcon.setSize(enumCSS.SIZE_PASSWORD);
+                mask = true;
+            }
+            textField.setText(textField.getText());
+            textField.end();
+        });
 
-}
-
-@Override
-protected void layoutChildren(double x, double y, double w, double h) {
-    super.layoutChildren(x, y, w, h);
-
-    layoutInArea(actionButton, x, y, w, h,0, HPos.RIGHT, VPos.CENTER);
-}
-
-@Override
-protected String maskText(String txt) {
-    if (getSkinnable() instanceof PasswordField && mask) {
-        int n = txt.length();
-        StringBuilder passwordBuilder = new StringBuilder(n);
-        for (int i = 0; i < n; i++) {
-            passwordBuilder.append("*");
-        }
-        return passwordBuilder.toString();
-    } else {
-
-        return txt;
+        // Listener para mostrar/ocultar el botón dependiendo si hay texto
+        textField.textProperty().addListener((observable, oldValue, newValue) -> actionButton.setVisible(!newValue.isEmpty()));
     }
-}
 
+    /**
+     * Layout para posicionar el botón de acción pegado a la derecha.
+     *
+     * @param x Coordenada X del área de layout.
+     * @param y Coordenada Y del área de layout.
+     * @param w Ancho del área de layout.
+     * @param h Alto del área de layout.
+     */
+    @Override
+    protected void layoutChildren(double x, double y, double w, double h) {
+        super.layoutChildren(x, y, w, h);
+        // Posiciona el botón de acción pegado a la derecha
+        layoutInArea(actionButton, x + w - actionButton.getPrefWidth(), y, actionButton.getPrefWidth(), h, 0, HPos.RIGHT, VPos.CENTER);
+    }
+
+    /**
+     * Método para enmascarar el texto de la contraseña.
+     *
+     * @param txt El texto de la contraseña.
+     * @return El texto enmascarado si la bandera mask es true, de lo contrario el texto original.
+     */
+    @Override
+    protected String maskText(String txt) {
+        if (getSkinnable() instanceof PasswordField && mask) {
+            int n = txt.length();
+            StringBuilder passwordBuilder = new StringBuilder(n);
+            for (int i = 0; i < n; i++) {
+                passwordBuilder.append("*");
+            }
+            return passwordBuilder.toString();
+        } else {
+            return txt;
+        }
+    }
+
+    // Getters para el botón de acción, el icono de acción y la bandera de enmascaramiento
     public Button getActionButton() {
         return actionButton;
     }
@@ -94,5 +115,4 @@ protected String maskText(String txt) {
     public boolean isMask() {
         return mask;
     }
-
 }

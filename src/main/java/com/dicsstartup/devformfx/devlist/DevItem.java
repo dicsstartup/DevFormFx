@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.devlist;
 
 
@@ -41,7 +37,6 @@ abstract public class DevItem <T> extends DevGrid {
         this.setPadding(new Insets(0, 10, 0, 10)); 
         GridPane.setValignment(label, VPos.BOTTOM);
         HBox.setHgrow(actions, Priority.ALWAYS);
-        this.actions.getStyleClass().add("r");
         this.add(label, 0, 0);
         this.add(actions, 1, 0,1,2);
     }

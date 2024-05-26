@@ -16,31 +16,36 @@ public class DevSlider extends DevInput {
     Slider slider;
 
     public DevSlider(String name, String title, Orientation or) {
-        super(name, title, TypeDevInput.SLIDER);
+        super(name, title);
         slider = new Slider();
-        configInitial(or);
+        config(or);
     }
 
     public DevSlider(String name, String title, Orientation or, double d, double d1, double d2) {
-        super(name, title, TypeDevInput.SLIDER);
+        super(name, title);
         slider = new Slider(d, d1, d2);
-        configInitial(or);
+        config(or);
     }
 
-    private void configInitial(Orientation or) {
-        slider.setOrientation(or);
+    @Override
+    protected void config() {
         this.setSpacing(5);
         this.slider.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.getChildren().addAll(this.title, this.slider);
     }
 
+    protected void config(Orientation or) {
+        slider.setOrientation(or);
+        this.config();
+    }
+
     public Slider getSlider() {
         return slider;
     }
-    
-       @Override
-    public Object getValue() {
-        return this.slider.getValue();
+
+    @Override
+    public InputValue getValue() {
+        return new InputValue(this.key, this.slider.getValue());
    }
     @Override
     public void addError(String message) {

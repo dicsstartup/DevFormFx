@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx;
 
 
@@ -17,8 +13,6 @@ import java.util.stream.Collectors;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
 
 /**
  *
@@ -37,7 +31,6 @@ public class DevFormBuilder extends GridPane {
         grid.setMaxWidth(Double.MAX_VALUE);
         this.actions= new ArrayList();
         this.inputs= new ArrayList();
-        DevActionSqueare summit= new DevActionSqueare("large","primary",new DevIcon("add","secundary","large"));
         DevActionSqueare summit= new DevActionSqueare("large","primary",new DevIcon("add","secondary","large"));
         this.actions.add(summit);
     }
@@ -101,15 +94,13 @@ public class DevFormBuilder extends GridPane {
     }
 
     public void addInput(DevInput input, int x, int y) {
-         VBox.setVgrow(input, Priority.ALWAYS);
         this.grid.add(input, x, y);
         this.inputs.add(input);
     }
 
     public void addInput(DevInput input, int x, int y, int col, int row) {
-        VBox.setVgrow(input, Priority.ALWAYS);
-        this.grid.add(input, x, y);
-         this.inputs.add(input);
+        this.grid.add(input, x, y,col,row);
+        this.inputs.add(input);
     }
     
     public void removeInput(DevInput input){
@@ -120,7 +111,7 @@ public class DevFormBuilder extends GridPane {
     public Map<String, Object> values(){
         Map<String, Object> resultMap = this.inputs.stream()
                 .collect(Collectors.toMap(
-                        DevInput::getName,
+                        DevInput::getKey,
                         item -> item.getValue()) 
                 );
         return resultMap;

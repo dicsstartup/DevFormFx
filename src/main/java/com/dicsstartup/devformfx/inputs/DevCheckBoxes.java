@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import java.util.ArrayList;
@@ -25,6 +21,7 @@ public class DevCheckBoxes extends DevInput {
     private boolean onlyOneOpction = false;
 
     public DevCheckBoxes(String name, String title, Options... options) {
+        super(name, title);
         this.options = Arrays.stream(options).collect(Collectors.toCollection(ArrayList::new));
         hbox = new HBox();
         config();
@@ -32,14 +29,15 @@ public class DevCheckBoxes extends DevInput {
     }
 
     public DevCheckBoxes(String name, String title, boolean OnlyOneOpction, Options... options) {
-        super(name, title, TypeDevInput.CHECK_BOXES);
+        super(name, title);
         this.onlyOneOpction = OnlyOneOpction;
         this.options = Arrays.stream(options).collect(Collectors.toCollection(ArrayList::new));
         hbox = new HBox();
         config();
     }
 
-    private void config() {
+    @Override
+    protected void config() {
         this.hbox.setSpacing(10);
         this.hbox.setAlignment(Pos.CENTER);
         this.hbox.getStyleClass().add("box");
@@ -71,11 +69,11 @@ public class DevCheckBoxes extends DevInput {
     }
 
     @Override
-    public Object getValue() {
+    public InputValue getValue() {
         if (this.onlyOneOpction) {
             for (Options o : this.options) {
                 if (o.isSelected()) {
-                    return o.getText();
+                    return new InputValue(this.key, o.getText());
                 }
             }
             return null;
@@ -84,7 +82,7 @@ public class DevCheckBoxes extends DevInput {
             for (Options o : this.options) {
                 results.put(o.name, o.isSelected());
             }
-            return results;
+            return new InputValue(this.key, results);
         }
 
     }

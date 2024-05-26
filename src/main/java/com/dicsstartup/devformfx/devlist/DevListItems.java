@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.devlist;
 
 import com.dicsstartup.devformfx.Actions.DevActionCircle;
 import com.dicsstartup.devformfx.Icons.DevIcon;
 import com.dicsstartup.devformfx.inputs.DevInput;
-import com.dicsstartup.devformfx.inputs.TypeDevInput;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.control.ScrollPane;
@@ -30,13 +25,12 @@ abstract public class DevListItems<T> extends DevInput {
     public DeleteDevItem deleteCallback;
 
     public DevListItems(String name, String title) {
-        super(name, title, TypeDevInput.LIST_ITEMS);
-        initialConfig();
+        super(name, title);
+        config();
 
     }
-
-    private void initialConfig() {
-        this.add = new DevActionCircle("medium","primary",new DevIcon("add","secundary","medium"));
+    @Override
+    protected void config() {
         this.add = new DevActionCircle("medium","primary",new DevIcon("add","secondary","medium"));
         this.add.getStyleClass().add("dev-add-item");
         this.header = new AnchorPane();
