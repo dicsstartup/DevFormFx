@@ -30,6 +30,8 @@ public abstract class DevInput extends VBox {
         this.getStyleClass().add(enumCSS.DEV_INPUT);
         this.error.getStyleClass().add("label_error");
         this.title.getStyleClass().add("title");
+        this.error.getStyleClass().add(enumCSS.ERROR_LABEL);
+        this.title.getStyleClass().add(enumCSS.TITLE_LABEL);
     }
 
     public abstract Object getValue();

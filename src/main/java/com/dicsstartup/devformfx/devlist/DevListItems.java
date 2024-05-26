@@ -37,6 +37,7 @@ abstract public class DevListItems<T> extends DevInput {
 
     private void initialConfig() {
         this.add = new DevActionCircle("medium","primary",new DevIcon("add","secundary","medium"));
+        this.add = new DevActionCircle("medium","primary",new DevIcon("add","secondary","medium"));
         this.add.getStyleClass().add("dev-add-item");
         this.header = new AnchorPane();
         this.vbox = new VBox();

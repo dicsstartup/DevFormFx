@@ -25,7 +25,6 @@ public class DevCheckBoxes extends DevInput {
     private boolean onlyOneOpction = false;
 
     public DevCheckBoxes(String name, String title, Options... options) {
-        super(name, title, TypeDevInput.CHECK_BOXES);
         this.options = Arrays.stream(options).collect(Collectors.toCollection(ArrayList::new));
         hbox = new HBox();
         config();
