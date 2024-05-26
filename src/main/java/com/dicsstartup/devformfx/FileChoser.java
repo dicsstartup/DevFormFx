@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx;
 
 import com.dicsstartup.devformfx.devlist.DevItem;
 import com.dicsstartup.devformfx.devlist.DevListItems;
 import java.io.File;
+
+import com.dicsstartup.devformfx.inputs.InputValue;
 import javafx.stage.FileChooser;
 
 /**
@@ -40,7 +38,7 @@ public class FileChoser extends DevListItems<File> {
         this.vbox.getChildren().remove(object);
     }
        @Override
-    public Object getValue() {
+    public InputValue getValue() {
         return null;
    }
 

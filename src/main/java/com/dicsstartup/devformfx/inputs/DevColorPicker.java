@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import javafx.scene.control.ColorPicker;
@@ -16,26 +12,26 @@ public class DevColorPicker extends DevInput {
     ColorPicker colorPicker;
 
     public DevColorPicker(String name, String title) {
-        super(name, title, TypeDevInput.COLOR_PICKER);
+        super(name, title);
         this.colorPicker = new ColorPicker();
-        configInitial();
+        config();
     }
 
     public DevColorPicker(String name, String title, Color color) {
-        super(name, title, TypeDevInput.COLOR_PICKER);
+        super(name, title);
         this.colorPicker = new ColorPicker(color);
-        configInitial();
+        config();
     }
-
-    private void configInitial() {
+    @Override
+    protected void config() {
         this.setSpacing(5);
         this.colorPicker.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.getChildren().addAll(this.title, this.colorPicker);
     }
     
        @Override
-    public Object getValue() {
-        return this.colorPicker.getValue();
+    public InputValue getValue() {
+        return new InputValue(key, this.colorPicker.getValue());
    }
     @Override
     public void addError(String message) {

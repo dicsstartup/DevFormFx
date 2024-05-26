@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import javafx.scene.Node;
@@ -14,6 +10,8 @@ public class enumCSS {
 
     // Inputs
     public static final String DEV_INPUT = "devInput";
+    public static final String ERROR_LABEL = "error_label";
+    public static final String TITLE_LABEL = "title_label";
 
     // DevTextArea
     public static final String DEVTEXTAREA = "devTextArea";
@@ -39,14 +37,10 @@ public class enumCSS {
 
    
     public static void removeStyleClass(Node i, String c) {
-        if (i.getStyleClass().contains(c)) {
             i.getStyleClass().remove(c);
-        }
     }
 
     public static void addStyleClass(Node i, String c) {
-        if (!i.getStyleClass().contains(c)) {
-            i.getStyleClass().add(c);
-        }
+        if (!i.getStyleClass().contains(c)) i.getStyleClass().add(c);
     }
 }

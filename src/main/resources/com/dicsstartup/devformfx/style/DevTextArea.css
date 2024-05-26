@@ -1,0 +1,33 @@
+/*DevTextArea*/
+
+.devInput>.devTextArea {
+    -fx-wrap-text: true;
+    -fx-font-size: 16px;
+    -fx-background-color: primary;
+    -fx-focus-color: secondary;
+    -fx-border-width: 1px;
+    -fx-border-color: secondary;
+    -fx-border-radius: 6px;
+    -fx-text-fill: secondary;
+}
+
+.devInput>.devTextArea.error {
+    -fx-text-fill: warn;
+    -fx-focus-color: warn;
+    -fx-border-color: warn;
+}
+
+.devTextArea .content {
+    -fx-background-color: primary;
+    -fx-border-radius: 6px;
+}
+
+.devTextArea .scroll-pane {
+    -fx-background-color: primary;
+    -fx-border-radius: 6px;
+}
+
+.devInput .maxlabel {
+    -fx-text-alignment: RIGHT;
+    -fx-text-fill: secondary;
+}

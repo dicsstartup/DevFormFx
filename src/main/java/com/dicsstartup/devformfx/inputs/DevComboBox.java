@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import javafx.scene.control.ComboBox;
@@ -15,18 +11,19 @@ public class DevComboBox extends DevInput {
     ComboBox comboBox;
 
     public DevComboBox(String name, String title) {
-        super(name, title, TypeDevInput.COMBO_BOX);
+        super(name, title);
         comboBox = new ComboBox();
-        configInitial();
+        config();
     }
 
     public DevComboBox(String name, String title, ComboBox comboBox) {
-        super(name, title, TypeDevInput.COMBO_BOX);
+        super(name, title);
         this.comboBox = comboBox;
-        configInitial();
+        config();
     }
 
-    private void configInitial() {
+    @Override
+    protected void config() {
         this.setSpacing(5);
         this.comboBox.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         this.getChildren().addAll(this.title, this.comboBox);
@@ -34,8 +31,8 @@ public class DevComboBox extends DevInput {
     }
 
        @Override
-    public Object getValue() {
-        return this.comboBox.getValue();
+    public InputValue getValue() {
+        return new InputValue(this.key,this.comboBox.getValue());
    }
     @Override
     public void addError(String message) {

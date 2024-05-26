@@ -1,10 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import java.time.LocalDate;
+
 import javafx.scene.control.DatePicker;
 
 /**
@@ -16,18 +13,19 @@ public class DevDatePicker extends DevInput {
     DatePicker date = new DatePicker();
 
     public DevDatePicker(String name, String title) {
-        super(name, title, TypeDevInput.DATE_PICKER);
+        super(name, title);
         date = new DatePicker();
-        configInitial();
+        config();
     }
 
     public DevDatePicker(String name, String title, LocalDate ld) {
-        super(name, title, TypeDevInput.DATE_PICKER);
+        super(name, title);
         date = new DatePicker(ld);
-        configInitial();
+        config();
     }
 
-    private void configInitial() {
+    @Override
+    protected void config() {
         date.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         date.setMaxHeight(Double.MAX_VALUE);
         this.setSpacing(5);
@@ -35,8 +33,8 @@ public class DevDatePicker extends DevInput {
     }
 
        @Override
-    public Object getValue() {
-        return this.date.getChronology();
+    public InputValue getValue() {
+        return new InputValue(this.key, this.date.getChronology());
    }
     @Override
     public void addError(String message) {

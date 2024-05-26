@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.dicsstartup.devformfx.inputs;
 
 import javafx.beans.property.BooleanProperty;
@@ -22,7 +18,7 @@ import javafx.scene.shape.Rectangle;
  */
 public class SwitchButton extends StackPane {
 
-    private final Rectangle back = new Rectangle(30, 10, Color.RED);
+    private final Rectangle back = new Rectangle(30, 10, Color.WHITE);
     private final Button button = new Button();
     private static final PseudoClass checked_PSEUDO_CLASS = PseudoClass.getPseudoClass("checked");
 
