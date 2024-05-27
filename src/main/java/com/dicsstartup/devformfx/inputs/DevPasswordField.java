@@ -121,7 +121,7 @@ public class DevPasswordField extends DevInput {
         }
         for (Validation validation : patterns) {
             if (!this.passwordField.getText().matches(validation.pattern)) {
-                this.addError(validation.massage);
+                this.addError(validation.getMessage());
                 return false;
             }
         }

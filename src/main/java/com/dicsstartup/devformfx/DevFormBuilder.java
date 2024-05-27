@@ -2,7 +2,7 @@ package com.dicsstartup.devformfx;
 
 
 import com.dicsstartup.devformfx.Actions.DevAction;
-import com.dicsstartup.devformfx.Actions.DevActionSqueare;
+import com.dicsstartup.devformfx.Actions.DevActionSquare;
 import com.dicsstartup.devformfx.Icons.DevIcon;
 import com.dicsstartup.devformfx.inputs.DevInput;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class DevFormBuilder extends GridPane {
         grid.setMaxWidth(Double.MAX_VALUE);
         this.actions= new ArrayList();
         this.inputs= new ArrayList();
-        DevActionSqueare summit= new DevActionSqueare("large","primary",new DevIcon("add","secondary","large"));
+        DevActionSquare summit= new DevActionSquare("large","primary",new DevIcon("add","secondary","large"));
         this.actions.add(summit);
     }
 
