@@ -1,6 +1,5 @@
 package com.dicsstartup.devformfx.devlist;
 
-
 import com.dicsstartup.devformfx.DevGrid;
 import javafx.geometry.Insets;
 import javafx.geometry.VPos;
@@ -10,42 +9,55 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 
 /**
+ * Clase abstracta DevItem que extiende DevGrid.
+ * Proporciona la estructura básica para un ítem con una etiqueta y un contenedor de acciones.
  *
+ * @param <T> Tipo del valor del ítem.
  * @author Didier
- * @param <T>
- * @param <Object>
  */
-abstract public class DevItem <T> extends DevGrid {
-    
-    Label label;
-    public HBox  actions;
+abstract public class DevItem<T> extends DevGrid {
+
+    private Label label;
+    private HBox actions;
     private T value;
 
-    public DevItem( String s ,T value) {
-       super();
-        this.label = new Label(s);
-        this.actions= new HBox();
+    /**
+     * Constructor que inicializa el ítem con un texto y un valor.
+     *
+     * @param text El texto de la etiqueta.
+     * @param value El valor del ítem.
+     */
+    public DevItem(String text, T value) {
+        super();
+        this.label = new Label(text);
+        this.actions = new HBox();
         this.value = value;
-        configInital();
+        configInitial();
     }
-  
-    public void configInital (){
+
+    /**
+     * Configuración inicial del ítem.
+     */
+    public void configInitial() {
         this.getStyleClass().add("item");
-        this.addColsWithWidth(70,30);
-        this.addRowsWithHeigtht(30);
-        this.addRowsWithHeigtht(30);
-        this.setPadding(new Insets(0, 10, 0, 10)); 
+        this.addColumnsWithWidth(70, 30);
+        this.addRowConstraint(30);
+        this.addRowConstraint(30);
+        this.setPadding(new Insets(0, 10, 0, 10));
         GridPane.setValignment(label, VPos.BOTTOM);
         HBox.setHgrow(actions, Priority.ALWAYS);
         this.add(label, 0, 0);
-        this.add(actions, 1, 0,1,2);
+        this.add(actions, 1, 0, 1, 2);
     }
-  
+
+    /**
+     * Método abstracto para obtener el GridPane del ítem.
+     *
+     * @return El GridPane del ítem.
+     */
     public abstract GridPane getBox();
 
- 
-    
-
+    // Getters y setters
 
     public Label getLabel() {
         return label;
@@ -55,6 +67,14 @@ abstract public class DevItem <T> extends DevGrid {
         this.label = label;
     }
 
+    public HBox getActions() {
+        return actions;
+    }
+
+    public void setActions(HBox actions) {
+        this.actions = actions;
+    }
+
     public T getValue() {
         return value;
     }
@@ -62,5 +82,4 @@ abstract public class DevItem <T> extends DevGrid {
     public void setValue(T value) {
         this.value = value;
     }
-    
 }

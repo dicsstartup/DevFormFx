@@ -14,13 +14,13 @@
     -fx-max-width: 15px;
     -fx-max-height: 15px;
 }
-.devInput>.box>.devSwitchButton>.back{
+.devInput>.box>.devSwitchButton>.rectangle{
     -fx-fill:secondary-dark ;
     -fx-min-width: 30px;
     -fx-min-height: 10px;
     -fx-max-width: 30px;
     -fx-max-height: 10px;
 }
-.devInput>.box>.devSwitchButton:checked>.back{
+.devInput>.box>.devSwitchButton:checked>.rectangle{
     -fx-fill: primary-ligth;
 }

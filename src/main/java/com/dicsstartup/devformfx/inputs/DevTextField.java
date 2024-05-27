@@ -115,7 +115,7 @@ public class DevTextField extends DevInput {
         }
         for (Validation validation : this.patterns) {
             if (!this.textField.getText().matches(validation.pattern)) {
-                this.addError(validation.massage);
+                this.addError(validation.getMessage());
                 return false;
             }
         }

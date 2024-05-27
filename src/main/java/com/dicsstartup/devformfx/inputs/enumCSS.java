@@ -28,12 +28,15 @@ public class enumCSS {
     
     //DevCheckBox
     public static final String DEVCHECKBOX = "devCheckBox";
-    
-    
-    
+
+    //DevCheckBox
+    public static final String DEVSWITCHBUTTON = "devSwitchButton";
+
     //status
     public static final String ERROR = "error";
     public static final String CORRECT = "correct";
+    public static final String CHECKED = "checked";
+
 
    
     public static void removeStyleClass(Node i, String c) {

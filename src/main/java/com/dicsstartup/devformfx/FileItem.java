@@ -1,8 +1,6 @@
 package com.dicsstartup.devformfx;
 
-
-
-import com.dicsstartup.devformfx.Actions.DevActionSqueare;
+import com.dicsstartup.devformfx.Actions.DevActionSquare;
 import com.dicsstartup.devformfx.Icons.DevIcon;
 import com.dicsstartup.devformfx.devlist.DeleteDevItem;
 import com.dicsstartup.devformfx.devlist.DevItem;
@@ -29,13 +27,13 @@ public class FileItem extends DevItem<File> {
         this.add(this.peso, 0, 1);
         GridPane.setHalignment(this.peso, HPos.RIGHT);
         GridPane.setValignment(this.peso, VPos.TOP);
-       this.actions.setAlignment(Pos.CENTER_RIGHT);
+       this.getActions().setAlignment(Pos.CENTER_RIGHT);
        this.eliminarCallback=eliminarCallback;
-       DevActionSqueare delete = new DevActionSqueare("small","primary",new DevIcon("delete","secondary","small"));
+       DevActionSquare delete = new DevActionSquare("small","primary",new DevIcon("delete","secondary","small"));
        delete.setOnAction(event -> {
             this.eliminarCallback.delete(this);
         });
-         this.actions.getChildren().add(delete);
+         this.getActions().getChildren().add(delete);
 
     }
 
