@@ -1,9 +1,9 @@
 package com.dicsstartup.devformfx;
 
-import com.dicsstartup.devformfx.Actions.DevActionSquare;
-import com.dicsstartup.devformfx.Icons.DevIcon;
-import com.dicsstartup.devformfx.devlist.DeleteDevItem;
-import com.dicsstartup.devformfx.devlist.DevItem;
+import com.dicsstartup.devformfx.devActions.DevActionSquare;
+import com.dicsstartup.devformfx.devIcons.DevIcon;
+import com.dicsstartup.devformfx.devList.DeleteDevItem;
+import com.dicsstartup.devformfx.devList.DevItem;
 import java.io.File;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;

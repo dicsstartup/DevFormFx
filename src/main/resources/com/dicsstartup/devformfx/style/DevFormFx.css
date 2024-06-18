@@ -6,25 +6,37 @@
     primary: #171717;
     secondary: #e8e8e8;
     secondary-dark : #c5c5c5;
-    warn: red;
-    correct: #0ff80f;
+    warn: rgb(143, 26, 26);
+    correct: #128312;
     -fx-font-family: "Arial";
+}
+
+
+
+
+.content {
+    -fx-background-color: primary;
+    -fx-background-radius: 12px;
+    -fx-hgap: 10.0;
+    -fx-vgap: 10.0;
+    -fx-padding: 18.0;
+    -fx-padding-left: 18.0;
+    -fx-padding-right: 18.0;
+    -fx-padding-top: 18.0;
+}
+
+
+.controls {
+    -fx-alignment:baseline-right ;	
 }
 
 /*Formulario */
 .form {
     -fx-background-color: secondary;
-}
-
-.form>.inputs {
-    -fx-background-color: primary;
-    -fx-background-radius: 12px;
+    -fx-max-height: 100%;
     -fx-max-width: 100%;
 }
 
-.form>GridPane {
-    -fx-hgap: 10;
-}
 
 /*Inputs*/
 .devInput {

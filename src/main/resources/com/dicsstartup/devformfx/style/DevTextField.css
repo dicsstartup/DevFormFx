@@ -1,22 +1,24 @@
 /*DevTextField*/
-.devInput>.devTextField {
+.devInput.devTextField>.text-field{
     -fx-font-size: 16px;
-    -fx-background-color: primary;
+    -fx-background-color: derive(primary,10%);
     -fx-focus-color: secondary;
     -fx-border-width: 1px;
-    -fx-border-color: secondary;
-    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
     -fx-text-fill: secondary;
+    -fx-border-radius: 6px;
 }
 
-.devInput>.devTextField.error {
-    -fx-text-fill: warn;
+.devInput.devTextField>.text-field:focused {
+    -fx-border-color: secondary-dark;
+}
+
+.devInput.devTextField:error>.text-field {
     -fx-focus-color: warn;
     -fx-border-color: warn;
 }
 
-.devInput>.devTextField.correct {
-    -fx-text-fill: correct;
+.devInput.devTextField:correct>.text-field {
     -fx-focus-color: correct;
     -fx-border-color: correct;
 }

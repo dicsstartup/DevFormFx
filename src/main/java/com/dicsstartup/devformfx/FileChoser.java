@@ -1,10 +1,9 @@
 package com.dicsstartup.devformfx;
 
-import com.dicsstartup.devformfx.devlist.DevItem;
-import com.dicsstartup.devformfx.devlist.DevListItems;
+import com.dicsstartup.devformfx.devList.DevItem;
+import com.dicsstartup.devformfx.devList.DevListItems;
 import java.io.File;
 
-import com.dicsstartup.devformfx.inputs.InputValue;
 import javafx.stage.FileChooser;
 
 /**
@@ -38,9 +37,14 @@ public class FileChoser extends DevListItems<File> {
         this.vbox.getChildren().remove(object);
     }
        @Override
-    public InputValue getValue() {
+    public File getValue() {
         return null;
    }
+
+    @Override
+    public void setValue(File value) {
+
+    }
 
     @Override
     public void addError(String message) {
