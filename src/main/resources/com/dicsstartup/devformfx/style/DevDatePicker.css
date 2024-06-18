@@ -1,0 +1,99 @@
+.devInput>.date-picker {
+    -fx-background-color: derive(primary, 10%);
+    -fx-focus-color: secondary;
+    -fx-border-width: 1px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.devInput>.date-picker:focused {
+    -fx-border-color: secondary-dark;
+}
+.devInput>.date-picker>.date-picker-display-node {
+    -fx-background-color: derive(primary, 10%);
+    -fx-font-size: 16px;
+    -fx-focus-color: secondary;
+    -fx-border-width: 1px;
+    -fx-text-fill: secondary-dark;
+}
+
+.devInput>.date-picker>.arrow-button {
+    -fx-background-color: derive(primary, 10%);
+}
+
+.devInput>.date-picker>.arrow-button>.arrow {
+    -fx-shape: "M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z";
+    -fx-background-color: secondary-dark;
+    -fx-pref-width: 16px;
+    -fx-pref-height: 16px;
+}
+
+.date-picker .cell {
+	-fx-background-color: secondary;
+}
+.date-picker .cell:hover {
+	-fx-background-color: secondary-dark;
+}
+.date-picker .cell:focused {
+	-fx-background-color: secondary-dark;
+}
+.date-picker .selected {
+	-fx-background-color: primary;
+	-fx-text-fill: secondary;
+}
+.date-picker .selected:focused {
+	-fx-background-color: primary;
+	-fx-text-fill: secondary;
+}
+
+.date-picker-popup  {
+	-fx-background-color: primary;
+}
+.date-picker-popup .month-year-pane {
+	-fx-background-color: primary;
+}
+.date-picker-popup .month-year-pane .label {
+	-fx-text-fill: secondary;
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-alignment: CENTER;
+    -fx-fill-height: false;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: primary;
+    -fx-color: transparent;
+}
+.date-picker-popup > * > .spinner > .button:focused {
+    -fx-background-color: derive(primary, 15%) ;
+    -fx-color: secondary;
+}
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-color: secondary;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: derive(primary, 80%);
+    -fx-padding: 0;
+}
+.date-picker-popup > * > .date-cell { 
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-border-color: secondary-dark;
+    -fx-background-color: derive(secondary,50%);
+    -fx-text-fill: primary;
+}
+
+.date-picker-popup > * > .day-cell.today {
+    -fx-background-color: primary, derive(secondary, -20%), secondary-dark;
+    -fx-background-insets: 1, 2, 3;
+}
+
+.date-picker-popup > * > .day-cell.previous-month,
+.date-picker-popup > * > .day-cell.next-month{
+    -fx-background-color: derive(secondary,10%);
+    -fx-text-fill: secondary-dark;
+}
