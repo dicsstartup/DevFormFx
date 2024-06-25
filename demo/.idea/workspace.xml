@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec8a9b6f-6dc1-4060-b3a6-640fc05b73de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dicsstartup/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/PalleteColors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/DevForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/DevForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/FileItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/FileItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dicsstartup/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/devInputs/componets/SwitchButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/devInputs/componets/SwitchButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/devInputs/componets/VisiblePasswordFieldSkin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/devInputs/componets/VisiblePasswordFieldSkin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/devList/DevListItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/dicsstartup/devformfx/devList/DevListItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevActions.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevActions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevCheckBoxes.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevCheckBoxes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevColorPicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevColorPicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevComboBox.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevComboBox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevDatePicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevDatePicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevFormFx.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevFormFx.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevIcon.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevIcon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevPassWordField.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevPassWordField.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevSwitchButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevSwitchButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevTextArea.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevTextArea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevTextField.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/DevTextField.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/com/dicsstartup/devformfx/style/base.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2i6oiYNN7k50dYMjMBDtNBBpk8b" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,install,-Pgithub].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [install:install-file].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demo [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;demo&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dicsstartup" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn install:install-file" />
+      <command value="mvn clean install -Pgithub " />
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec8a9b6f-6dc1-4060-b3a6-640fc05b73de" name="Changes" comment="" />
+      <created>1718820517975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718820517975</updated>
+    </task>
+    <servers />
+  </component>
+</project>

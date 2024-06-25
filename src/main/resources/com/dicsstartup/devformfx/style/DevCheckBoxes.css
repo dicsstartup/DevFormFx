@@ -1,20 +1,23 @@
 /*DevCheckBoxes*/
 .devInput.devCheckBox>.box>.check-box  {
     -fx-alignment: center;
-    -fx-text-fill: secondary;
+    -fx-text-fill: derive(text-color,-20%);
 }
 
 .devInput.devCheckBox>.box>.check-box .box{
-    -fx-background-color: primary;
-    -fx-border-color: secondary;
+    -fx-background-color: background-color;
+    -fx-background-radius: 2px;
+    -fx-border-color: secondary-color;
     -fx-border-radius: 2px;
 }
 
 .devInput.devCheckBox>.box>.check-box:selected .mark {
-    -fx-background-color: primary;
+    -fx-background-color: background-color;
     -fx-shape: "M1.73,12.91 8.1,19.28 22.79,4.59 22.79,1.59 8.1,16.28 1.73,9.91";
 }
 
-.devInput.devCheckBox>.box>.check-box:selected .box {
-    -fx-background-color: secondary;
+.devInput.devCheckBox>.box>.check-box:selected .box{
+    -fx-background-color: secondary-color;
+    -fx-border-color: secondary-color;
+
 }

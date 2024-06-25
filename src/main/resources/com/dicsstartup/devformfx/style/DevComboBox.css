@@ -1,23 +1,23 @@
 /*DevComboBox*/
 .devInput.devComboBox>.combo-box{
     -fx-font-size: 16px;
-    -fx-background-color: derive(primary,10%);
+    -fx-background-color: derive(background-color,10%);
     -fx-border-width: 1px;
     -fx-background-radius: 6px;
     -fx-border-radius: 6px;
 }
 .devInput.devComboBox>.combo-box:focused {
-    -fx-border-color: secondary-dark;
+    -fx-border-color: derive(secondary-color,-20%);
 }
 
 .devInput.devComboBox>.combo-box>.list-cell{
-    -fx-text-fill: secondary;
+    -fx-text-fill: derive(text-color,-20%);
     -fx-16px: 16px;
 }
 
 .devInput.devComboBox>.combo-box:editable>.text-field{
-    -fx-text-fill: secondary;
-    -fx-background-color: primary;
+    -fx-text-fill: derive(text-color,-20%);
+    -fx-background-color: derive(background-color,10%);
     -fx-font-size: 16px;
 }
 
@@ -28,31 +28,32 @@
 
 .devInput.devComboBox>.combo-box>.arrow-button>.arrow{
     -fx-shape: "M480-360 280-560h400L480-360Z";
-    -fx-background-color: secondary;
+    -fx-background-color: secondary-color;
 }
 .devInput.devComboBox>.combo-box:showing>.arrow-button>.arrow{
    -fx-rotate:180;
 }
 
-.combo-box-popup .list-view 
-{
-    -fx-background-color: secondary;
+.combo-box-popup .list-view {
+    -fx-background-color: derive(background-color,10%);
     -fx-background-insets: 1;
     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6 ), 8, 0.0 , 0 , 0 );
 }    
 
-.combo-box-popup .list-view .list-cell 
-{
-    -fx-background-color: secondary;
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: derive(text-color,-40%);
+    -fx-background-color: derive(background-color,10%);
 }
 
 .combo-box-popup .list-view .list-cell:hover
 {
-    -fx-text-fill: secondary-dark;
-    -fx-background-color: derive(primary,10%);
+    -fx-text-fill: derive(text-color,-20%);
+    -fx-background-color: derive(background-color,15%);
 }
 
 .combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
 {
-    -fx-background-color: primary;
+    -fx-background-color: background-color;
+    -fx-text-fill: derive(text-color,-20%);
+
 }

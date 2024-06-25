@@ -1,4 +1,4 @@
-package com.dicsstartup.devformfx;
+package com.dicsstartup;
 
 import javafx.scene.paint.Color;
 

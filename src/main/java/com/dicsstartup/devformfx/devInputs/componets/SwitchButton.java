@@ -1,5 +1,6 @@
 package com.dicsstartup.devformfx.devInputs.componets;
 
+import com.dicsstartup.devformfx.DevForm;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.BooleanPropertyBase;
 import javafx.css.PseudoClass;
@@ -104,6 +105,7 @@ public class SwitchButton extends StackPane {
         // Añade las clases CSS al botón y al rectángulo
         this.getStyleClass().add(CLASS);
         rectangle.getStyleClass().add(CLASS_R);
+        this.getStylesheets().add(DevForm.class.getResource("style/switchButton.css").toExternalForm());
     }
 
     /**

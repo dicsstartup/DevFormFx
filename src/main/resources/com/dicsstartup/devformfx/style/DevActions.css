@@ -1,8 +1,4 @@
 /*DevActions*/
-.devAction {
-    -fx-background-color: primary;
-}
-
 .devAction:pressed {
     -fx-opacity: 0.7;
 }

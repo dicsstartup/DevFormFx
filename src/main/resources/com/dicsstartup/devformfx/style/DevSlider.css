@@ -1,37 +1,37 @@
 .slider .track {
-    -fx-background-color: derive(primary,15%);
+    -fx-background-color:  derive(background-color,20%);
     -fx-background-insets: 0; 
-    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.644), 2, 0, 0, 1);
+    -fx-effect: dropshadow(one-pass-box, primary-color, 2, 0, 0, 1);
 }
 
 .slider .thumb {
-    -fx-background-color: secondary-dark; /* Color de fondo del thumb */
+    -fx-background-color: secondary-color; /* Color de fondo del thumb */
     -fx-background-radius: 50%; /* Radio de esquina para hacer el thumb circular */
     -fx-pref-width: 14px; /* Ancho preferido del thumb */
     -fx-pref-height: 14px; /* Altura preferida del thumb */
-    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.705), 2, 0, 0, 1); /* Sombra del thumb */
+    -fx-effect: dropshadow(one-pass-box, primary-color, 2, 0, 0, 1); /* Sombra del thumb */
 }
 
 /* Estilo del thumb cuando está presionado */
 .slider .thumb:pressed {
-    -fx-background-color: secondary; /* Color de fondo del thumb presionado */
+    -fx-background-color: derive(secondary-color,20%); /* Color de fondo del thumb presionado */
     -fx-effect: dropshadow(one-pass-box, rgba(255, 255, 255, 0.5), 30, 0.5, 0, 0);
 }
 
 /* Estilo del thumb cuando está enfocado */
 .slider:focused .thumb {
-    -fx-background-color: derive(secondary,70%);
+    -fx-background-color: derive(secondary-color,70%);
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.4), 4, 0, 0, 2);
 }
 
 /* Estilo de la etiqueta de valor del Slider */
 .slider .value-label {
-    -fx-text-fill: secondary-dark; /* Color del texto */
+    -fx-text-fill: derive(text-color,-40%); /* Color del texto */
 }
 
 /* Estilo del filled track (parte del track que indica el progreso) */
 .slider .track .filled-track {
-    -fx-background-color: secondary; /* Color del filled track */
+    -fx-background-color: secondary-color; /* Color del filled track */
     -fx-background-insets: 0; /* Inset del fondo */
     -fx-background-radius: 5px; /* Radio de esquina del fondo */
 }

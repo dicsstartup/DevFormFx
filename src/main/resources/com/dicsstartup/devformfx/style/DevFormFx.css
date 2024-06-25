@@ -1,21 +1,7 @@
 @import'base.css';
 
-.root {
-    /*paleta de color*/
-    primary-ligth: #454545;
-    primary: #171717;
-    secondary: #e8e8e8;
-    secondary-dark : #c5c5c5;
-    warn: rgb(143, 26, 26);
-    correct: #128312;
-    -fx-font-family: "Arial";
-}
-
-
-
-
-.content {
-    -fx-background-color: primary;
+.content > .grid {
+    -fx-background-color: background-color;
     -fx-background-radius: 12px;
     -fx-hgap: 10.0;
     -fx-vgap: 10.0;
@@ -32,7 +18,7 @@
 
 /*Formulario */
 .form {
-    -fx-background-color: secondary;
+    -fx-background-color: text-color;
     -fx-max-height: 100%;
     -fx-max-width: 100%;
 }
@@ -44,36 +30,36 @@
 }
 
 .error_label {
-    -fx-text-fill: warn;
+    -fx-text-fill: warn-color;
 }
 
 .title_label {
-    -fx-text-fill: secondary;
+    -fx-text-fill: text-color;
     -fx-font-weight: bold;
 }
 
 /*List*/
 .item {
-    -fx-background-color: primary;
+    -fx-background-color:  secondary-color;
     -fx-background-radius: 6px;
 }
 
 .dev-add-item {
-    -fx-background-color: secondary;
+    -fx-background-color: secondary-color;
 }
 
 
 /*Tools */
 .primaryB {
-    -fx-background-color: primary;
+    -fx-background-color: primary-color;
 }
 
 .secundaryB {
-    -fx-background-color: secondary;
+    -fx-background-color: secondary-color;
 }
 
 .titulo {
-    -fx-text-fill: secondary;
+    -fx-text-fill: secondary-color;
     -fx-text-alignment: center;
     -fx-font-family: 'Arial Black';
     -fx-font-size: 24px;
@@ -84,7 +70,7 @@
 }
 
 .scroll-pane {
-    -fx-background-color: secondary;
+    -fx-background-color: derive(background-color,10%);
     -fx-background-radius: 8px;
 }
 
@@ -108,6 +94,44 @@
 
 .scroll-bar:horizontal .thumb,
 .scroll-bar:vertical .thumb {
-    -fx-background-color: primary;
+    -fx-background-color: primary-color;
+    -fx-background-radius: 5em;
+}
+/* form */
+.content.scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
+
+.content.scroll-pane > .corner {
+    -fx-background-color: background-color;
+    -fx-background-radius: 12px;
+}
+
+.content.scroll-pane {
+    -fx-background-color: background-color;
+    -fx-background-radius: 12px;
+}
+
+.content.scroll-bar:horizontal,
+.content.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.content.increment-button,
+.content.decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.content.scroll-bar:horizontal .track,
+.content.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.content.scroll-bar:horizontal .thumb,
+.content.scroll-bar:vertical .thumb {
+    -fx-background-color: primary-color;
     -fx-background-radius: 5em;
 }

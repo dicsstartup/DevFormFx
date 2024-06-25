@@ -29,7 +29,7 @@ public class FileItem extends DevItem<File> {
         GridPane.setValignment(this.peso, VPos.TOP);
        this.getActions().setAlignment(Pos.CENTER_RIGHT);
        this.eliminarCallback=eliminarCallback;
-       DevActionSquare delete = new DevActionSquare("small","primary",new DevIcon("delete","secondary","small"));
+       DevActionSquare delete = new DevActionSquare("small","primary-color",new DevIcon("delete","text-color","small"));
        delete.setOnAction(event -> {
             this.eliminarCallback.delete(this);
         });
