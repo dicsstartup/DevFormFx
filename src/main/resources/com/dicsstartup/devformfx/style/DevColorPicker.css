@@ -1,26 +1,26 @@
 .devInput.devColorPicker>.color-picker{
-    -fx-background-color: derive(primary,10%);
-    -fx-focus-color: secondary;
+    -fx-background-color: derive(background-color,10%);
+    -fx-focus-color: secondary-color;
     -fx-border-width: 1px;
     -fx-background-radius: 6px;
     -fx-border-radius: 6px;
 }
 
 .devInput.devColorPicker>.color-picker:focused {
-    -fx-border-color: secondary-dark;
+    -fx-border-color: derive(secondary-color,-20%);
 }
 
 .devInput.devColorPicker>.color-picker>.color-picker-label{
     -fx-font-size: 16px;
-    -fx-focus-color: secondary;
+    -fx-focus-color: secondary-color;
     -fx-border-width: 1px;
     -fx-background-radius: 6px;
-    -fx-text-fill: secondary-dark;
+    -fx-text-fill: derive(text-color,-20%);
 }
 
 .devInput.devColorPicker>.color-picker>.arrow-button>.arrow{
     -fx-shape: "M480-360 280-560h400L480-360Z";
-    -fx-background-color: secondary;
+    -fx-background-color: secondary-color;
 }
 
 .devInput.devColorPicker>.color-picker:showing>.arrow-button>.arrow{
@@ -28,14 +28,14 @@
 }
 /* ------- COLOR PALETTE ------- */
 .color-palette>.hyperlink {
-    -fx-text-fill: secondary;
+    -fx-text-fill: secondary-color;
 } 
 
 .color-palette>.label {
-    -fx-text-fill: secondary;
+    -fx-text-fill: secondary-color;
 } 
 .color-palette {
-    -fx-background-color: primary;
+    -fx-background-color: primary-color;
 }
 .color-palette > .color-picker-grid {
     -fx-padding: 0.5px;
@@ -44,7 +44,7 @@
 
 .color-palette > .color-picker-grid > .color-square:focused, 
 .color-palette > .color-picker-grid > .color-square:selected:focused {
-    -fx-background-color: primary, secondary-dark;
+    -fx-background-color: primary-color, derive(secondary-color,-20%);
     -fx-background-insets: -2,0;
     -fx-background-radius: 5,0;
     -fx-scale-x: 1.5;

@@ -32,7 +32,7 @@ public class VisiblePasswordFieldSkin extends TextFieldSkin {
     private final Button actionButton = new Button("View");
 
     // Icono del botón de acción
-    private final DevIcon actionIcon = new DevIcon(ICON_EYE, "secondary", SIZE_EYE);
+    private final DevIcon actionIcon = new DevIcon(ICON_EYE, "secondary-color", SIZE_EYE);
 
     // Bandera para indicar si la contraseña está enmascarada
     private boolean mask = true;

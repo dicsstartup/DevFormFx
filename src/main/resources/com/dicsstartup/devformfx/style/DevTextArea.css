@@ -1,47 +1,49 @@
 /*DevTextArea*/
 .devInput.devTextArea > .text-area{
+    -fx-padding: 0;
     -fx-font-size: 16px;
-    -fx-background-color: derive(primary,10%);
-    -fx-focus-color: secondary;
+    -fx-background-color: derive(background-color,10%);
+    -fx-focus-color: secondary-color;
     -fx-border-width: 1px;
     -fx-background-radius: 6px;
-    -fx-text-fill: secondary;
+    -fx-text-fill: derive(text-color,10%);
     -fx-border-radius: 6px;
-    -fx-wrap-text: true;
+    -fx-wrap-text: true;    
 }
 
 .devInput.devTextArea > .text-area:focused {
-    -fx-border-color: secondary-dark;
+    -fx-border-color: derive(secondary-color,-20%);
 }
 
 .devInput.devTextArea:error>.text-area {
-    -fx-focus-color: warn;
-    -fx-border-color: warn;
+    -fx-focus-color: warn-color;
+    -fx-border-color: warn-color;
 }
 
 .devInput.devTextArea:correct>.text-area {
-    -fx-focus-color: correct;
-    -fx-border-color: correct;
+    -fx-focus-color: correct-color;
+    -fx-border-color: correct-color;
 }
 
 .devInput.devTextArea > .text-area .content {
-    -fx-background-color: derive(primary,10%);
+    -fx-background-color: derive(background-color,10%);
+    -fx-padding: 10px; 
     -fx-border-radius: 6px;
 }
 
 
 .devInput.devTextArea > .text-area .scroll-pane {
-    -fx-background-color: derive(primary,10%);
-    -fx-border-radius: 6px;
+    -fx-background-color: null;
+     -fx-border-radius: 6px;
 }
 
 .devInput .maxlabel {
     -fx-text-alignment: RIGHT;
-    -fx-text-fill: secondary;
+    -fx-text-fill: derive(text-color,10%);
 }
 
 .devInput.devTextArea.error {
-    -fx-text-fill: warn;
-    -fx-focus-color: warn;
-    -fx-border-color: warn;
+    -fx-text-fill: warn-color;
+    -fx-focus-color: warn-color;
+    -fx-border-color: warn-color;
 }

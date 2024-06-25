@@ -1,10 +1,13 @@
-package com.dicsstartup.devformfx;
+package com.dicsstartup;
 
-import com.dicsstartup.devformfx.devIcons.DevIcon;
+import com.dicsstartup.devformfx.DevForm;
+import com.dicsstartup.devformfx.DevMapper;
+import com.dicsstartup.devformfx.FileChoser;
+import com.dicsstartup.devformfx.PalleteColors;
 import com.dicsstartup.devformfx.devActions.DevAction;
 import com.dicsstartup.devformfx.devActions.DevActionSquare;
+import com.dicsstartup.devformfx.devIcons.DevIcon;
 import com.dicsstartup.devformfx.devInputs.*;
-import com.dicsstartup.devformfx.devInputs.DevSlider;
 import com.dicsstartup.devformfx.devInputs.core.ValidationActive;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -33,9 +36,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        DevMapper maper= new DevMapper();
-        Usuario user = new Usuario("John", "Doe", "123456", "Admin", Arrays.stream(lenguajes).findFirst().get(), "Me gusta el culo de mi gata", true,
-                Color.BLUE, LocalDate.of(1990, 5, 15), 50.0);
+        Usuario user = new Usuario("", "Doe", "", "Admin", Arrays.stream(lenguajes).findFirst().get(), "Me gusta el culo de mi gata", true,
+                Color.BLUE, LocalDate.of(2024, 6, 15), 50.0);
 
         DevTextField textField = new DevTextField("name", "Nombre", true);
         textField.addPattern(new ValidationActive("^[a-zA-Z\\s]*$","Tiene que ser solo letras"));
@@ -57,12 +59,12 @@ public class App extends Application {
 
         DevDatePicker date = new DevDatePicker("date_birday","Fecha de Nacimiento");
 
-        DevAction add = new DevActionSquare("large","primary",new DevIcon("add","secondary","large"));
+        DevAction add = new DevActionSquare("large","primary-color",new DevIcon("check","text-color","large"));
 
         DevSlider nivel = new DevSlider("level","Que nivel tienes?",10,100,0);
         ObservableList<Lenguaje> lenguajesList = FXCollections.observableArrayList(lenguajes);
         DevComboBox<Lenguaje> comboBox = new DevComboBox<>("lenguage","¿Lenguaje principal?",lenguajesList);
-        comboBox.getComboBox().setConverter(new StringConverter<Lenguaje>() {
+        comboBox.getComboBox().setConverter(new StringConverter<>() {
             @Override
             public String toString(Lenguaje lenguaje) {
                 return lenguaje != null ? lenguaje.getNombre() : "";
@@ -88,6 +90,8 @@ public class App extends Application {
         DevForm form = new DevForm.DevFormBuilder()
                 .setModel(user)
                 .addColumnsWithWidth(50,50)
+             .setPallete(new PalleteColors("#20201E","#171717","#e8e8e8","#e8e8e8","#5BA025","#B81818"))
+                .setPallete(new PalleteColors("#92dec5","#091f19","#522579","#DBF4EC","#5BA025","#B81818"))
                 .addDevInput(textField,0,0)
                 .addDevInput(textField2,1,0)
                 .addDevInput(password,0,1,2,1)
@@ -97,21 +101,22 @@ public class App extends Application {
                 .addDevInput(date,1,4)
                 .addDevInput(comboBox,0,5)
                 .addDevInput(nivel,1,5)
-                .addDevInput(fileChoser,0,6,2,1)
+                .addDevInput(area,0,6,2,1)
+                .addDevInput(area,0,6,2,1)
                 .addDevActions(add)
                 .build();
+        form.getGrid().setMinWidth(400);
 
         add.setOnAction( value -> { form.validForm();
             try {
-                maper.inputsToObject(user,form.getInputs());
                 System.out.println(user.toString());
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         });
 
-        scene = new Scene(form,600,640, Color.AQUA);
-        scene.getStylesheets().add(getClass().getResource("style/DevFormFX.css").toExternalForm());
+        scene = new Scene(form,600,670, Color.AQUA);
+
         stage.setScene(scene);
         stage.show();
     }

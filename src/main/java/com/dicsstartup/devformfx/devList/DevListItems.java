@@ -42,7 +42,7 @@ abstract public class DevListItems<T> extends DevInput<T> {
      */
     @Override
     protected void config() {
-        this.addButton = new DevActionCircle("small", "secondary", new DevIcon("add", "primary", "small"));
+        this.addButton = new DevActionCircle("small", "derive(secondary-color,60%)", new DevIcon("add","background-color", "small"));
         this.addButton.getStyleClass().add("dev-add-item");
         this.header = new AnchorPane();
         this.vbox = new VBox();

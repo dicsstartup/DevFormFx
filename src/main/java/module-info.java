@@ -1,4 +1,4 @@
-module com.dicsstartup.devformfx {
+module dicsstartup.devformfx {
     requires javafx.controls;
     requires javafx.fxml;
 

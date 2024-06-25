@@ -1,26 +1,16 @@
 /*DevSwitchButton*/
 
 .devInput.devSwitchButton>.box>.switchButton:checked > .button{
-    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.074), 0.2, 0.2, 0.2, 1); 
-    -fx-background-color: secondary;
-}
-
-.devInput.devSwitchButton>.box>.switchButton > .button{
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 0.2, 0, 0, 0); 
-    -fx-background-color: secondary;
-    -fx-alignment: CENTER_LEFT;
-    -fx-min-width: 15px;
-    -fx-min-height: 15px;
-    -fx-max-width: 15px;
-    -fx-max-height: 15px;
-}
-.devInput.devSwitchButton>.box>.switchButton > .rectangle{
-    -fx-fill:secondary-dark ;
-    -fx-min-width: 30px;
-    -fx-min-height: 10px;
-    -fx-max-width: 30px;
-    -fx-max-height: 10px;
+    -fx-background-color: primary-color;
 }
 .devInput.devSwitchButton>.box>.switchButton:checked >.rectangle{
-    -fx-fill: primary-ligth;
+    -fx-fill:derive(primary-color,60%);
+}
+.devInput.devSwitchButton>.box>.switchButton > .button{
+    -fx-effect: dropshadow(gaussian, background-color, 0.2, 0, 0, 0); 
+    -fx-background-color: derive(secondary-color,10%);
+
+}
+.devInput.devSwitchButton>.box>.switchButton > .rectangle{
+    -fx-fill:derive(secondary-color,-40%);
 }

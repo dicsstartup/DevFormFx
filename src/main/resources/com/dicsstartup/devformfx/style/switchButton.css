@@ -1,0 +1,14 @@
+/*SwitchButton*/
+.switchButton > .button{
+    -fx-alignment: CENTER_LEFT;
+    -fx-min-width: 15px;
+    -fx-min-height: 15px;
+    -fx-max-width: 15px;
+    -fx-max-height: 15px;
+}
+.switchButton > .rectangle{
+    -fx-min-width: 30px;
+    -fx-min-height: 10px;
+    -fx-max-width: 30px;
+    -fx-max-height: 10px;
+}
