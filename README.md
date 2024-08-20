@@ -7,12 +7,12 @@ DevFormFx es una librería Java que te permite crear bibliotecas de manera diná
 ## Requisitos del Sistema
 
 - Maven 3.9.5
-- JDK 18.0.2.1
-- Se recomienda utilizar NetBeans como entorno de desarrollo integrado (IDE)
+- Eclipse Adoptium Temurin OpenJDK 17.0.12.7-hotspot
+- Se recomienda utilizar Intellij IDEA como entorno de desarrollo integrado (IDE)
    
 ## Uso del Proyecto:
 
-Utiliza las tres principales partes de DevFormFx:
+Se utiliza en el proyecto DevHelper
 
 ### DevFormBuilder: 
 
